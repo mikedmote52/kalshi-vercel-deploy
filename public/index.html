@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalshi Trading Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f1117; color: #e1e4e8; min-height: 100vh; }
+  .container { max-width: 900px; margin: 0 auto; padding: 16px; }
+  .header { text-align: center; padding: 20px 0 12px; }
+  .header h1 { font-size: 22px; color: #58a6ff; }
+  .header .sub { font-size: 13px; color: #8b949e; margin-top: 4px; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+  .badge-live { background: #238636; color: #fff; }
+  .badge-view { background: #6e40c9; color: #fff; }
+
+  .stats { display: flex; gap: 12px; margin: 12px 0; flex-wrap: wrap; }
+  .stat-card { flex: 1; min-width: 120px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 12px; text-align: center; }
+  .stat-card .label { font-size: 11px; color: #8b949e; text-transform: uppercase; }
+  .stat-card .value { font-size: 22px; font-weight: 700; color: #58a6ff; margin-top: 2px; }
+
+  .tabs { display: flex; gap: 0; margin: 16px 0 12px; border-bottom: 1px solid #30363d; }
+  .tab { padding: 8px 18px; cursor: pointer; font-size: 13px; color: #8b949e; border-bottom: 2px solid transparent; transition: all .15s; }
+  .tab:hover { color: #e1e4e8; }
+  .tab.active { color: #58a6ff; border-bottom-color: #58a6ff; }
+
+  .opp-card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 16px; margin-bottom: 12px; }
+  .opp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+  .opp-title { font-size: 15px; font-weight: 600; color: #e1e4e8; flex: 1; }
+  .opp-side { padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; }
+  .side-yes { background: #238636; color: #fff; }
+  .side-no { background: #da3633; color: #fff; }
+  .opp-probs { display: flex; gap: 16px; margin: 8px 0; font-size: 13px; }
+  .opp-probs span { color: #8b949e; }
+  .opp-probs strong { color: #e1e4e8; }
+  .edge-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 700; }
+  .edge-high { background: rgba(35,134,54,.2); color: #3fb950; }
+  .edge-med { background: rgba(210,153,34,.2); color: #d29922; }
+
+  .reasoning { font-size: 12px; color: #8b949e; margin: 6px 0; line-height: 1.5; }
+  .thesis-box { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 8px 10px; margin: 6px 0; font-size: 12px; }
+  .thesis-box .label { font-size: 10px; text-transform: uppercase; color: #8b949e; margin-bottom: 2px; }
+  .redteam-box { background: #1c0d0d; border: 1px solid #5a2020; border-radius: 6px; padding: 8px 10px; margin: 6px 0; font-size: 12px; }
+  .redteam-box .label { font-size: 10px; text-transform: uppercase; color: #da3633; margin-bottom: 2px; }
+
+  .related-badge { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 10px; background: rgba(110,64,201,.2); color: #a371f7; margin-left: 6px; }
+
+  .trade-controls { display: flex; align-items: center; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+  .amount-stepper { display: flex; align-items: center; gap: 0; }
+  .amount-stepper button { width: 28px; height: 28px; background: #30363d; border: 1px solid #484f58; color: #e1e4e8; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+  .amount-stepper button:first-child { border-radius: 4px 0 0 4px; }
+  .amount-stepper button:last-child { border-radius: 0 4px 4px 0; }
+  .amount-stepper .amount { background: #0d1117; border: 1px solid #484f58; border-left: 0; border-right: 0; height: 28px; width: 60px; text-align: center; color: #e1e4e8; font-size: 13px; font-weight: 600; }
+
+  .btn-execute { padding: 6px 16px; border-radius: 6px; border: none; font-size: 13px; font-weight: 600; cursor: pointer; transition: all .15s; }
+  .btn-execute:disabled { opacity: .5; cursor: not-allowed; }
+  .btn-approve { background: #238636; color: #fff; }
+  .btn-approve:hover:not(:disabled) { background: #2ea043; }
+  .btn-reject { background: #30363d; color: #8b949e; margin-left: auto; }
+  .btn-reject:hover:not(:disabled) { background: #484f58; }
+
+  .exec-result { margin-top: 8px; padding: 8px 10px; border-radius: 6px; font-size: 12px; }
+  .exec-success { background: rgba(35,134,54,.15); border: 1px solid #238636; color: #3fb950; }
+  .exec-error { background: rgba(218,54,51,.15); border: 1px solid #da3633; color: #f85149; }
+
+  .trade-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: #161b22; border: 1px solid #30363d; border-radius: 6px; margin-bottom: 6px; font-size: 12px; }
+  .trade-row .ticker { font-weight: 600; color: #58a6ff; }
+  .pnl-pos { color: #3fb950; }
+  .pnl-neg { color: #f85149; }
+
+  /* Position cards */
+  .pos-card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 16px; margin-bottom: 12px; }
+  .pos-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+  .pos-title { font-size: 15px; font-weight: 600; color: #e1e4e8; flex: 1; }
+  .pos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin: 10px 0; }
+  .pos-metric { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 8px 10px; }
+  .pos-metric .label { font-size: 10px; text-transform: uppercase; color: #8b949e; margin-bottom: 2px; }
+  .pos-metric .val { font-size: 16px; font-weight: 700; }
+  .pos-metric .val-green { color: #3fb950; }
+  .pos-metric .val-red { color: #f85149; }
+  .pos-metric .val-blue { color: #58a6ff; }
+  .pos-metric .val-neutral { color: #e1e4e8; }
+  .pos-reasoning-section { margin-top: 10px; }
+  .pos-reasoning-toggle { font-size: 12px; color: #58a6ff; cursor: pointer; background: none; border: none; padding: 4px 0; }
+  .pos-reasoning-toggle:hover { text-decoration: underline; }
+  .pos-pnl-bar { height: 4px; border-radius: 2px; margin-top: 8px; background: #30363d; overflow: hidden; }
+  .pos-pnl-fill { height: 100%; border-radius: 2px; transition: width .3s; }
+  .pos-summary { display: flex; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+  .pos-summary-card { flex: 1; min-width: 140px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 14px; text-align: center; }
+  .pos-summary-card .label { font-size: 11px; color: #8b949e; text-transform: uppercase; }
+  .pos-summary-card .value { font-size: 20px; font-weight: 700; margin-top: 2px; }
+
+  .empty { text-align: center; padding: 40px; color: #484f58; font-size: 14px; }
+  .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(255,255,255,.3); border-top-color: #fff; border-radius: 50%; animation: spin .6s linear infinite; margin-right: 6px; vertical-align: middle; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .conf-high { color: #3fb950; } .conf-medium { color: #d29922; } .conf-low { color: #f85149; }
+  .refresh-btn { background: #30363d; border: 1px solid #484f58; color: #8b949e; padding: 4px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; }
+  .refresh-btn:hover { background: #484f58; color: #e1e4e8; }
+
+  .held-banner { background: rgba(88,166,255,.1); border: 1px solid rgba(88,166,255,.3); border-radius: 6px; padding: 8px 12px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
+  .held-banner .held-info { color: #58a6ff; font-weight: 600; }
+  .held-banner .held-detail { color: #8b949e; }
+  .add-controls { display: flex; align-items: center; gap: 8px; margin-top: 10px; }
+  .btn-add { background: #1f6feb; color: #fff; padding: 6px 14px; border-radius: 6px; border: none; font-size: 12px; font-weight: 600; cursor: pointer; }
+  .btn-add:hover:not(:disabled) { background: #388bfd; }
+  .btn-add:disabled { opacity: .5; cursor: not-allowed; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect, useCallback } = React;
+
+function App() {
+  const [data, setData] = useState(null);
+  const [tab, setTab] = useState("opportunities");
+  const [decisions, setDecisions] = useState({});
+  const [amounts, setAmounts] = useState({});
+  const [executing, setExecuting] = useState({});
+  const [results, setResults] = useState({});
+  const [liveBalance, setLiveBalance] = useState(null);
+  const [livePositions, setLivePositions] = useState(null);
+  const [positionDetails, setPositionDetails] = useState(null);
+  const [positionsLoading, setPositionsLoading] = useState(false);
+  const [expandedPositions, setExpandedPositions] = useState({});
+  const [addAmounts, setAddAmounts] = useState({});
+  const [addExecuting, setAddExecuting] = useState({});
+  const [addResults, setAddResults] = useState({});
+
+  // Load dashboard data
+  useEffect(() => {
+    fetch("/dashboard_data.json?" + Date.now())
+      .then(r => r.json())
+      .then(d => {
+        setData(d);
+        const initAmounts = {};
+        (d.opportunities || []).forEach(o => { initAmounts[o.ticker] = 2.0; });
+        setAmounts(initAmounts);
+      })
+      .catch(e => console.error("Failed to load data:", e));
+  }, []);
+
+  // Fetch live balance
+  const refreshBalance = useCallback(() => {
+    fetch("/api/balance")
+      .then(r => r.json())
+      .then(d => {
+        setLiveBalance(d.balance);
+        setLivePositions(d.positions);
+      })
+      .catch(() => {});
+  }, []);
+
+  useEffect(() => { refreshBalance(); }, [refreshBalance]);
+
+  // Fetch enriched position data
+  const refreshPositions = useCallback(() => {
+    setPositionsLoading(true);
+    fetch("/api/positions?" + Date.now())
+      .then(r => r.json())
+      .then(d => {
+        setPositionDetails(d.positions || []);
+        setPositionsLoading(false);
+      })
+      .catch(() => setPositionsLoading(false));
+  }, []);
+
+  useEffect(() => { refreshPositions(); }, [refreshPositions]);
+
+  const executeTrade = async (ticker, side, amount) => {
+    setExecuting(prev => ({...prev, [ticker]: true}));
+    setResults(prev => ({...prev, [ticker]: null}));
+    try {
+      const resp = await fetch("/api/approve", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ ticker, side, amount }),
+      });
+      const result = await resp.json();
+      setResults(prev => ({...prev, [ticker]: result}));
+      if (result.success) {
+        setDecisions(prev => ({...prev, [ticker]: "executed"}));
+        refreshBalance();
+      }
+    } catch (err) {
+      setResults(prev => ({...prev, [ticker]: { success: false, error: err.message }}));
+    } finally {
+      setExecuting(prev => ({...prev, [ticker]: false}));
+    }
+  };
+
+  // Add to existing position
+  const addToPosition = async (ticker, side, amount) => {
+    setAddExecuting(prev => ({...prev, [ticker]: true}));
+    setAddResults(prev => ({...prev, [ticker]: null}));
+    try {
+      const resp = await fetch("/api/approve", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ ticker, side, amount, add_to_position: true }),
+      });
+      const result = await resp.json();
+      setAddResults(prev => ({...prev, [ticker]: result}));
+      if (result.success) {
+        refreshBalance();
+        refreshPositions();
+      }
+    } catch (err) {
+      setAddResults(prev => ({...prev, [ticker]: { success: false, error: err.message }}));
+    } finally {
+      setAddExecuting(prev => ({...prev, [ticker]: false}));
+    }
+  };
+
+  if (!data) return <div className="container"><div className="empty">Loading dashboard...</div></div>;
+
+  const opps = data.opportunities || [];
+  const trades = data.trade_history || [];
+  const balance = liveBalance !== null ? liveBalance : data.balance;
+  const positions = livePositions !== null ? livePositions : data.positions;
+
+  // Build a set of held tickers for cross-referencing
+  const heldTickerSet = new Set((positionDetails || []).map(p => p.ticker));
+
+  return (
+    <div className="container">
+      <div className="header">
+        <h1>Kalshi AI Trading Dashboard</h1>
+        <div className="sub">
+          AI-powered prediction market analysis with human approval
+          <span style={{marginLeft: 8}}>
+            <span className="badge badge-live">LIVE TRADING</span>
+          </span>
+        </div>
+      </div>
+
+      <div className="stats">
+        <div className="stat-card">
+          <div className="label">Balance</div>
+          <div className="value">${typeof balance === 'number' ? balance.toFixed(2) : balance}</div>
+        </div>
+        <div className="stat-card">
+          <div className="label">Open Positions</div>
+          <div className="value">{positions}</div>
+        </div>
+        <div className="stat-card">
+          <div className="label">Opportunities</div>
+          <div className="value">{opps.length}</div>
+        </div>
+        <div className="stat-card">
+          <div className="label">Markets Scanned</div>
+          <div className="value">{data.markets_scanned || "—"}</div>
+        </div>
+      </div>
+
+      <div style={{textAlign: 'right', marginBottom: 4}}>
+        <button className="refresh-btn" onClick={refreshBalance}>Refresh Balance</button>
+        <span style={{fontSize: 11, color: '#484f58', marginLeft: 8}}>
+          Data: {data.generated ? new Date(data.generated).toLocaleString() : "—"}
+        </span>
+      </div>
+
+      <div className="tabs">
+        <div className={`tab ${tab === 'opportunities' ? 'active' : ''}`} onClick={() => setTab('opportunities')}>
+          Opportunities ({opps.filter(o => !heldTickerSet.has(o.ticker)).length})
+        </div>
+        <div className={`tab ${tab === 'positions' ? 'active' : ''}`} onClick={() => { setTab('positions'); refreshPositions(); }}>
+          Current Positions ({positions})
+        </div>
+        <div className={`tab ${tab === 'history' ? 'active' : ''}`} onClick={() => setTab('history')}>
+          Trade History ({trades.length})
+        </div>
+        <div className={`tab ${tab === 'calibration' ? 'active' : ''}`} onClick={() => setTab('calibration')}>
+          Calibration
+        </div>
+      </div>
+
+      {tab === "opportunities" && (
+        <div>
+          {(() => {
+            const newOpps = opps.filter(o => !heldTickerSet.has(o.ticker));
+            const heldCount = opps.length - newOpps.length;
+            return (
+              <React.Fragment>
+                {heldCount > 0 && (
+                  <div className="held-banner" style={{marginBottom: 12}}>
+                    <span className="held-info">{heldCount} {heldCount > 1 ? 'opportunities' : 'opportunity'} already in your portfolio</span>
+                    <span className="held-detail">Manage on Current Positions tab</span>
+                  </div>
+                )}
+              </React.Fragment>
+            );
+          })()}
+          {opps.filter(o => !heldTickerSet.has(o.ticker)).length === 0 ? (
+            <div className="empty">
+              {opps.length > 0
+                ? "All current opportunities are already in your portfolio. Check the Current Positions tab."
+                : "No opportunities found. Run a scan to discover mispricings."}
+            </div>
+          ) : opps.filter(o => !heldTickerSet.has(o.ticker)).map(opp => (
+            <OpportunityCard
+              key={opp.ticker}
+              opp={opp}
+              amount={amounts[opp.ticker] || 2}
+              setAmount={(v) => setAmounts(prev => ({...prev, [opp.ticker]: v}))}
+              decision={decisions[opp.ticker]}
+              executing={executing[opp.ticker]}
+              result={results[opp.ticker]}
+              onExecute={() => executeTrade(opp.ticker, opp.side, amounts[opp.ticker] || 2)}
+              onReject={() => setDecisions(prev => ({...prev, [opp.ticker]: "rejected"}))}
+            />
+          ))}
+        </div>
+      )}
+
+      {tab === "positions" && (
+        <div>
+          {positionsLoading && !positionDetails ? (
+            <div className="empty"><span className="spinner"></span> Loading positions from Kalshi...</div>
+          ) : !positionDetails || positionDetails.length === 0 ? (
+            <div className="empty">No open positions. Approve opportunities to start building your portfolio.</div>
+          ) : (
+            <div>
+              {/* Portfolio summary */}
+              {(() => {
+                const totalInvested = positionDetails.reduce((s, p) => s + (p.entry_cost || 0), 0);
+                const totalValue = positionDetails.reduce((s, p) => s + (p.current_value || p.entry_cost || 0), 0);
+                const totalPnl = totalValue - totalInvested;
+                const totalMaxPayout = positionDetails.reduce((s, p) => s + (p.max_payout || 0), 0);
+                const portfolioRoi = totalInvested > 0 ? (totalPnl / totalInvested * 100) : 0;
+
+                // Cross-reference with trade history for AI expected values
+                const tradeMap = {};
+                (data.trade_history || []).forEach(t => { tradeMap[t.market_ticker] = t; });
+                const weightedExpectedValue = positionDetails.reduce((s, p) => {
+                  const trade = tradeMap[p.ticker];
+                  if (trade && trade.ai_probability) {
+                    const aiProb = p.side === 'yes' ? trade.ai_probability : (1 - trade.ai_probability);
+                    return s + (aiProb * p.max_payout);
+                  }
+                  return s + (p.current_value || p.entry_cost || 0);
+                }, 0);
+
+                return (
+                  <div className="pos-summary">
+                    <div className="pos-summary-card">
+                      <div className="label">Total Invested</div>
+                      <div className="value" style={{color: '#58a6ff'}}>${totalInvested.toFixed(2)}</div>
+                    </div>
+                    <div className="pos-summary-card">
+                      <div className="label">Current Value</div>
+                      <div className="value" style={{color: '#e1e4e8'}}>${totalValue.toFixed(2)}</div>
+                    </div>
+                    <div className="pos-summary-card">
+                      <div className="label">Unrealized P&L</div>
+                      <div className="value" style={{color: totalPnl >= 0 ? '#3fb950' : '#f85149'}}>
+                        {totalPnl >= 0 ? '+' : ''}{totalPnl.toFixed(2)} ({portfolioRoi >= 0 ? '+' : ''}{portfolioRoi.toFixed(1)}%)
+                      </div>
+                    </div>
+                    <div className="pos-summary-card">
+                      <div className="label">AI Expected Value</div>
+                      <div className="value" style={{color: '#a371f7'}}>${weightedExpectedValue.toFixed(2)}</div>
+                    </div>
+                    <div className="pos-summary-card">
+                      <div className="label">Max Payout</div>
+                      <div className="value" style={{color: '#3fb950'}}>${totalMaxPayout.toFixed(2)}</div>
+                    </div>
+                  </div>
+                );
+              })()}
+
+              {/* Individual position cards */}
+              {positionDetails.map(pos => {
+                const tradeMap = {};
+                (data.trade_history || []).forEach(t => { tradeMap[t.market_ticker] = t; });
+                const trade = tradeMap[pos.ticker];
+                const expanded = expandedPositions[pos.ticker];
+
+                // AI model ROI: what the model expects this position to return
+                let aiExpectedRoi = null;
+                let aiExpectedPnl = null;
+                let aiProb = null;
+                if (trade && trade.ai_probability) {
+                  aiProb = pos.side === 'yes' ? trade.ai_probability : (1 - trade.ai_probability);
+                  const expectedPayout = aiProb * pos.max_payout;
+                  aiExpectedPnl = expectedPayout - pos.entry_cost;
+                  aiExpectedRoi = pos.entry_cost > 0 ? (aiExpectedPnl / pos.entry_cost * 100) : 0;
+                }
+
+                // P&L bar width (0-100% range, centered at 50%)
+                const pnlPct = pos.unrealized_pnl !== null && pos.entry_cost > 0
+                  ? Math.max(-100, Math.min(100, (pos.unrealized_pnl / pos.entry_cost) * 100))
+                  : 0;
+                const barWidth = Math.abs(pnlPct) / 2;
+                const barColor = pnlPct >= 0 ? '#3fb950' : '#f85149';
+
+                return (
+                  <div className="pos-card" key={pos.ticker}>
+                    <div className="pos-header">
+                      <div className="pos-title">{pos.title}</div>
+                      <span className={`opp-side ${pos.side === 'yes' ? 'side-yes' : 'side-no'}`}>
+                        HOLDING {pos.side?.toUpperCase()}
+                      </span>
+                    </div>
+
+                    <div className="pos-grid">
+                      <div className="pos-metric">
+                        <div className="label">Contracts</div>
+                        <div className="val val-blue">{pos.contracts}</div>
+                      </div>
+                      <div className="pos-metric">
+                        <div className="label">Entry Price</div>
+                        <div className="val val-neutral">{pos.entry_price_cents}c</div>
+                      </div>
+                      <div className="pos-metric">
+                        <div className="label">Current Price</div>
+                        <div className="val val-neutral">
+                          {pos.current_price_cents !== null ? `${pos.current_price_cents}c` : '—'}
+                        </div>
+                      </div>
+                      <div className="pos-metric">
+                        <div className="label">Cost Basis</div>
+                        <div className="val val-blue">${pos.entry_cost.toFixed(2)}</div>
+                      </div>
+                      <div className="pos-metric">
+                        <div className="label">Current Value</div>
+                        <div className="val val-neutral">
+                          {pos.current_value !== null ? `$${pos.current_value.toFixed(2)}` : '—'}
+                        </div>
+                      </div>
+                      <div className="pos-metric">
+                        <div className="label">Unrealized P&L</div>
+                        <div className={`val ${pos.unrealized_pnl >= 0 ? 'val-green' : 'val-red'}`}>
+                          {pos.unrealized_pnl !== null
+                            ? `${pos.unrealized_pnl >= 0 ? '+' : ''}$${pos.unrealized_pnl.toFixed(2)}`
+                            : '—'}
+                          {pos.roi_percent !== null && (
+                            <span style={{fontSize: 12, marginLeft: 4}}>
+                              ({pos.roi_percent >= 0 ? '+' : ''}{pos.roi_percent.toFixed(1)}%)
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* P&L progress bar */}
+                    <div className="pos-pnl-bar">
+                      <div className="pos-pnl-fill" style={{width: `${Math.max(2, barWidth)}%`, background: barColor}}></div>
+                    </div>
+
+                    {/* Outcome scenarios */}
+                    <div style={{display: 'flex', gap: 16, margin: '10px 0', fontSize: 12}}>
+                      <div>
+                        <span style={{color: '#8b949e'}}>If {pos.side} resolves: </span>
+                        <span style={{color: '#3fb950', fontWeight: 600}}>+${pos.max_profit?.toFixed(2)}</span>
+                        <span style={{color: '#8b949e'}}> ({pos.entry_cost > 0 ? `+${(pos.max_profit / pos.entry_cost * 100).toFixed(0)}%` : '—'})</span>
+                      </div>
+                      <div>
+                        <span style={{color: '#8b949e'}}>If {pos.side === 'yes' ? 'no' : 'yes'} resolves: </span>
+                        <span style={{color: '#f85149', fontWeight: 600}}>${pos.max_loss?.toFixed(2)}</span>
+                        <span style={{color: '#8b949e'}}> (-100%)</span>
+                      </div>
+                    </div>
+
+                    {/* AI model expected value */}
+                    {aiProb !== null && (
+                      <div style={{background: '#0d1117', border: '1px solid #30363d', borderRadius: 6, padding: '8px 10px', margin: '6px 0', fontSize: 12}}>
+                        <div style={{fontSize: 10, textTransform: 'uppercase', color: '#a371f7', marginBottom: 4}}>AI Model Projection</div>
+                        <div style={{display: 'flex', gap: 16, flexWrap: 'wrap'}}>
+                          <span>AI probability {pos.side}: <strong style={{color: '#e1e4e8'}}>{(aiProb * 100).toFixed(0)}%</strong></span>
+                          <span>Expected value: <strong style={{color: '#a371f7'}}>${(aiProb * pos.max_payout).toFixed(2)}</strong></span>
+                          <span>Expected ROI: <strong style={{color: aiExpectedRoi >= 0 ? '#3fb950' : '#f85149'}}>
+                            {aiExpectedRoi >= 0 ? '+' : ''}{aiExpectedRoi.toFixed(1)}%
+                          </strong></span>
+                          <span>Edge: <strong style={{color: '#d29922'}}>
+                            {trade.edge ? (trade.edge * 100).toFixed(1) + '%' : '—'}
+                          </strong></span>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Expandable reasoning section */}
+                    {trade && (
+                      <div className="pos-reasoning-section">
+                        <button
+                          className="pos-reasoning-toggle"
+                          onClick={() => setExpandedPositions(prev => ({...prev, [pos.ticker]: !prev[pos.ticker]}))}
+                        >
+                          {expanded ? '▾ Hide Analysis' : '▸ Why are we holding this?'}
+                        </button>
+                        {expanded && (
+                          <div style={{marginTop: 6}}>
+                            <div className="reasoning">{trade.ai_reasoning || trade.reasoning}</div>
+                            {(trade.thesis) && (
+                              <div className="thesis-box">
+                                <div className="label">Thesis</div>
+                                {trade.thesis}
+                              </div>
+                            )}
+                            {(trade.counter_thesis) && (
+                              <div className="thesis-box">
+                                <div className="label">Counter-Thesis</div>
+                                {trade.counter_thesis}
+                              </div>
+                            )}
+                            {trade._red_team_flaw && (
+                              <div className="redteam-box">
+                                <div className="label">Red Team Challenge</div>
+                                <div style={{marginBottom: 4}}><strong>Fatal Flaw:</strong> {trade._red_team_flaw}</div>
+                                {trade._red_team_defense && <div><strong>Defense:</strong> {trade._red_team_defense}</div>}
+                              </div>
+                            )}
+                            <div style={{fontSize: 11, color: '#484f58', marginTop: 6}}>
+                              Entered {trade.trade_date} | {trade.contracts}x @ {trade.price_cents}c | Confidence: {trade.confidence || '—'}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Add to position controls */}
+                    <div className="add-controls">
+                      <div className="amount-stepper">
+                        <button onClick={() => setAddAmounts(prev => ({...prev, [pos.ticker]: Math.max(0.5, (prev[pos.ticker] || 1) - 0.5)}))}>-</button>
+                        <div className="amount">${(addAmounts[pos.ticker] || 1).toFixed(2)}</div>
+                        <button onClick={() => setAddAmounts(prev => ({...prev, [pos.ticker]: Math.min(500, (prev[pos.ticker] || 1) + 0.5)}))}>+</button>
+                      </div>
+                      <button
+                        className="btn-add"
+                        disabled={addExecuting[pos.ticker]}
+                        onClick={() => addToPosition(pos.ticker, pos.side, addAmounts[pos.ticker] || 1)}
+                      >
+                        {addExecuting[pos.ticker] ? <><span className="spinner"></span>Adding...</> : `Add $${(addAmounts[pos.ticker] || 1).toFixed(2)} to Position`}
+                      </button>
+                    </div>
+                    {addResults[pos.ticker] && addResults[pos.ticker].success && (
+                      <div className="exec-result exec-success" style={{marginTop: 6}}>
+                        Added {addResults[pos.ticker].contracts} contracts @ {addResults[pos.ticker].price_cents}c = ${addResults[pos.ticker].cost_dollars?.toFixed(2)}
+                      </div>
+                    )}
+                    {addResults[pos.ticker] && !addResults[pos.ticker].success && (
+                      <div className="exec-result exec-error" style={{marginTop: 6}}>
+                        Error: {addResults[pos.ticker].error}
+                      </div>
+                    )}
+
+                    {/* Expiration / status */}
+                    <div style={{display: 'flex', justifyContent: 'space-between', marginTop: 8, fontSize: 11, color: '#484f58'}}>
+                      <span>Status: {pos.market_status}</span>
+                      <span>{pos.ticker}</span>
+                      {pos.expiration_date && <span>Expires: {new Date(pos.expiration_date).toLocaleDateString()}</span>}
+                    </div>
+                  </div>
+                );
+              })}
+
+              <div style={{textAlign: 'center', marginTop: 8}}>
+                <button className="refresh-btn" onClick={refreshPositions}>
+                  {positionsLoading ? <><span className="spinner"></span>Refreshing...</> : 'Refresh Positions'}
+                </button>
+                {positionDetails && (
+                  <span style={{fontSize: 11, color: '#484f58', marginLeft: 8}}>
+                    Live from Kalshi API
+                  </span>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {tab === "history" && (
+        <div>
+          {trades.length === 0 ? (
+            <div className="empty">No trades yet. Approve opportunities to start trading.</div>
+          ) : trades.map((t, i) => (
+            <div className="trade-row" key={i}>
+              <div>
+                <span className="ticker">{t.market_ticker}</span>
+                <span style={{marginLeft: 8, color: '#8b949e'}}>{t.side?.toUpperCase()}</span>
+              </div>
+              <div style={{textAlign: 'right'}}>
+                <span style={{color: '#8b949e'}}>{t.contracts}x @ {t.price_cents}c</span>
+                <span style={{marginLeft: 8, fontWeight: 600}} className={t.pnl_dollars > 0 ? 'pnl-pos' : t.pnl_dollars < 0 ? 'pnl-neg' : ''}>
+                  ${(t.cost_dollars || 0).toFixed(2)}
+                </span>
+                <span style={{marginLeft: 8, fontSize: 11, color: '#484f58'}}>{t.status}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {tab === "calibration" && (
+        <div className="empty">
+          Calibration tracking will populate as trades resolve. The system tracks Brier scores to measure how well AI probability estimates match outcomes over time.
+        </div>
+      )}
+    </div>
+  );
+}
+
+function OpportunityCard({ opp, amount, setAmount, decision, executing, result, onExecute, onReject }) {
+  const [largeTradePending, setLargeTradePending] = React.useState(false);
+  React.useEffect(() => { setLargeTradePending(false); }, [amount]);
+
+  const handleExecute = () => {
+    if (amount > 50 && !largeTradePending) {
+      setLargeTradePending(true);
+      return;
+    }
+    setLargeTradePending(false);
+    onExecute();
+  };
+
+  const edgePct = (opp.edge * 100).toFixed(1);
+  const isHigh = opp.edge >= 0.15;
+  const isDone = decision === "executed" || decision === "rejected";
+
+  return (
+    <div className="opp-card" style={isDone ? {opacity: .5} : {}}>
+      <div className="opp-header">
+        <div className="opp-title">
+          {opp.title}
+          {opp._related_count > 0 && <span className="related-badge">+{opp._related_count} related</span>}
+        </div>
+        <span className={`opp-side ${opp.side === 'yes' ? 'side-yes' : 'side-no'}`}>
+          BUY {opp.side?.toUpperCase()}
+        </span>
+      </div>
+
+      <div className="opp-probs">
+        <span>AI: <strong>{(opp.ai_prob * 100).toFixed(0)}%</strong></span>
+        <span>Market: <strong>{(opp.market_prob * 100).toFixed(0)}%</strong></span>
+        <span className={`edge-badge ${isHigh ? 'edge-high' : 'edge-med'}`}>
+          {edgePct}% edge
+        </span>
+        <span>Confidence: <strong className={`conf-${opp.confidence}`}>{opp.confidence}</strong></span>
+      </div>
+
+      <div className="reasoning">{opp.reasoning}</div>
+
+      {opp.thesis && (
+        <div className="thesis-box">
+          <div className="label">Thesis</div>
+          {opp.thesis}
+        </div>
+      )}
+      {opp.counter_thesis && (
+        <div className="thesis-box">
+          <div className="label">Counter-Thesis</div>
+          {opp.counter_thesis}
+        </div>
+      )}
+
+      {opp._red_team_flaw && (
+        <div className="redteam-box">
+          <div className="label">Red Team Challenge</div>
+          <div style={{marginBottom: 4}}><strong>Fatal Flaw:</strong> {opp._red_team_flaw}</div>
+          {opp._red_team_defense && <div><strong>Defense:</strong> {opp._red_team_defense}</div>}
+        </div>
+      )}
+
+      {!isDone && (
+        <div className="trade-controls">
+          <div className="amount-stepper">
+            <button onClick={() => setAmount(Math.max(0.5, amount - 0.5))}>-</button>
+            <div className="amount" style={amount > 50 ? {color: '#f0a500', background: '#2a1f00', borderColor: '#f0a500'} : {}}>${amount.toFixed(2)}</div>
+            <button onClick={() => setAmount(Math.min(500, amount + 0.5))}>+</button>
+          </div>
+          <button
+            className="btn-execute btn-approve"
+            disabled={executing}
+            onClick={handleExecute}
+            style={largeTradePending ? {background: '#b45309', boxShadow: '0 0 0 2px #f0a500'} : {}}
+          >
+            {executing ? <><span className="spinner"></span>Placing Trade...</> : largeTradePending ? `⚠ Confirm $${amount.toFixed(2)} — click again` : `Execute $${amount.toFixed(2)} Trade`}
+          </button>
+          <button className="btn-execute btn-reject" onClick={onReject}>Skip</button>
+        </div>
+      )}
+      {largeTradePending && (
+        <div style={{marginTop: 4, fontSize: 11, color: '#f0a500'}}>Large trade (&gt;$50) — click Confirm to proceed or adjust amount.</div>
+      )}
+
+      {decision === "executed" && <div style={{marginTop: 8, color: '#3fb950', fontSize: 12, fontWeight: 600}}>TRADE EXECUTED</div>}
+      {decision === "rejected" && <div style={{marginTop: 8, color: '#484f58', fontSize: 12}}>Skipped</div>}
+
+      {result && result.success && (
+        <div className="exec-result exec-success">
+          Order filled: {result.contracts} contracts @ {result.price_cents}c = ${result.cost_dollars?.toFixed(2)} | Balance: ${result.balance_after?.toFixed(2)} | ID: {result.order_id?.slice(0,8)}
+        </div>
+      )}
+      {result && !result.success && (
+        <div className="exec-result exec-error">
+          Error: {result.error}
+        </div>
+      )}
+    </div>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
+</script>
+</body>
+</html>
