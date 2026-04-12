@@ -336,7 +336,7 @@ function App() {
 
                 // Cross-reference with trade history for AI expected values
                 const tradeMap = {};
-                (data.trade_history || []).forEach(t => { tradeMap[t.market_ticker] = t; });
+                (data.trade_history || []).forEach(t => { tradeMap[t.ticker] = t; });
                 const weightedExpectedValue = positionDetails.reduce((s, p) => {
                   const trade = tradeMap[p.ticker];
                   if (trade && trade.ai_probability) {
@@ -377,7 +377,7 @@ function App() {
               {/* Individual position cards */}
               {positionDetails.map(pos => {
                 const tradeMap = {};
-                (data.trade_history || []).forEach(t => { tradeMap[t.market_ticker] = t; });
+                (data.trade_history || []).forEach(t => { tradeMap[t.ticker] = t; });
                 const trade = tradeMap[pos.ticker];
                 const expanded = expandedPositions[pos.ticker];
 
@@ -581,7 +581,7 @@ function App() {
           ) : trades.map((t, i) => (
             <div className="trade-row" key={i}>
               <div>
-                <span className="ticker">{t.market_ticker}</span>
+                <span className="ticker">{t.ticker}</span>
                 <span style={{marginLeft: 8, color: '#8b949e'}}>{t.side?.toUpperCase()}</span>
               </div>
               <div style={{textAlign: 'right'}}>
