@@ -254,7 +254,7 @@ function App() {
         </div>
         <div className="stat-card">
           <div className="label">Markets Scanned</div>
-          <div className="value">{data.markets_scanned || "—"}</div>
+          <div className="value">{data.markets_scanned || (data.latest_scan && data.latest_scan.markets_pulled) || "—"}</div>
         </div>
       </div>
 
