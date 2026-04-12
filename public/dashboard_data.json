@@ -1,9 +1,57 @@
 {
-  "generated_at": "2026-04-12T13:47:03.291124",
-  "balance": 59.52,
+  "generated_at": "2026-04-12T13:56:26.358066",
+  "balance": 43.89,
   "total_pnl": 0,
-  "positions": 6,
+  "positions": 10,
   "position_details": [
+    {
+      "ticker": "KXG7LEADEROUT-45JAN01-KSTA",
+      "title": "Will Prime Minister of the United Kingdom be the first to leave office?",
+      "side": "",
+      "contracts": 0,
+      "price_cents": 0,
+      "cost_dollars": 0.0,
+      "ai_probability": 0.35,
+      "market_probability": 0.54,
+      "edge": 0.14250000000000002,
+      "thesis": "Other G7 leaders face significant political challenges and the 20-year timeframe makes UK PM advantage less decisive."
+    },
+    {
+      "ticker": "KXTIMEDECADE20S-30-EMUS",
+      "title": "Who will Time name as Person of the Decade? Elon Musk",
+      "side": "",
+      "contracts": 0,
+      "price_cents": 0,
+      "cost_dollars": 0.0,
+      "ai_probability": 0.45,
+      "market_probability": 0.34,
+      "edge": 0.11,
+      "thesis": "Musk has dominated multiple transformative industries this decade and fits Time's preference for influential, controversial figures."
+    },
+    {
+      "ticker": "AMAZONFTC-29DEC31",
+      "title": "Court finds Amazon illegally maintained monopoly",
+      "side": "",
+      "contracts": 0,
+      "price_cents": 0,
+      "cost_dollars": 0.0,
+      "ai_probability": 0.45,
+      "market_probability": 0.56,
+      "edge": 0.11,
+      "thesis": "Amazon's diverse business model and competitive marketplace dynamics make monopoly harder to prove than Google's search dominance."
+    },
+    {
+      "ticker": "KXELONMARS-99",
+      "title": "Elon Musk visits Mars by 2099",
+      "side": "",
+      "contracts": 0,
+      "price_cents": 0,
+      "cost_dollars": 0.0,
+      "ai_probability": 0.25,
+      "market_probability": 0.1,
+      "edge": 0.15,
+      "thesis": "Seven decades of technological advancement makes Mars travel highly probable, with Musk's resources providing access."
+    },
     {
       "ticker": "KXEARTHQUAKEJAPAN-30",
       "title": "Will there be an at least 8.0 magnitude earthquake in Japan before 2030?",
@@ -99,7 +147,7 @@
       "red_team_flaw": "The AI may be underestimating how Anthropic's recent partnerships with Google and Amazon provide both the capital buffer and strategic positioning needed to accelerate their IPO timeline ahead of OpenAI.",
       "red_team_strength": "moderate",
       "related_count": 0,
-      "suggested_size": 3.43
+      "suggested_size": 2.53
     },
     {
       "ticker": "KXELONMARS-99",
@@ -115,7 +163,7 @@
       "red_team_flaw": "The market appropriately accounts for the fact that no human has ever survived more than a few months in deep space, and Mars missions would require 2+ year journeys with currently unproven life support technology.",
       "red_team_strength": "weak",
       "related_count": 0,
-      "suggested_size": 4.13
+      "suggested_size": 3.05
     },
     {
       "ticker": "KXTRILLIONAIRE-30-EM",
@@ -131,7 +179,7 @@
       "red_team_flaw": "Musk's wealth concentration in two highly speculative companies makes him more vulnerable to dramatic wealth swings than competitors with diversified holdings.",
       "red_team_strength": "moderate",
       "related_count": 0,
-      "suggested_size": 2.62
+      "suggested_size": 1.93
     },
     {
       "ticker": "AMAZONFTC-29DEC31",
@@ -147,7 +195,7 @@
       "red_team_flaw": "",
       "red_team_strength": "",
       "related_count": 0,
-      "suggested_size": 2.92
+      "suggested_size": 2.16
     },
     {
       "ticker": "KXTIMEDECADE20S-30-EMUS",
@@ -163,7 +211,7 @@
       "red_team_flaw": "",
       "red_team_strength": "",
       "related_count": 0,
-      "suggested_size": 2.48
+      "suggested_size": 1.83
     },
     {
       "ticker": "KXG7LEADEROUT-45JAN01-KSTA",
@@ -179,7 +227,7 @@
       "red_team_flaw": "",
       "red_team_strength": "",
       "related_count": 0,
-      "suggested_size": 5.24
+      "suggested_size": 3.86
     }
   ],
   "trade_history": [
