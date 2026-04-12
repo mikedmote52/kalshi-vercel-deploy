@@ -222,7 +222,7 @@ function App() {
   const opps = data.opportunities || [];
   const trades = data.trade_history || [];
   const balance = liveBalance !== null ? liveBalance : data.balance;
-  const positions = livePositions !== null ? livePositions : data.positions;
+  const positions = livePositions !== null ? livePositions : (Array.isArray(data.positions) ? data.positions.length : (data.positions || 0));
 
   // Build a set of held tickers for cross-referencing
   const heldTickerSet = new Set((positionDetails || []).map(p => p.ticker));

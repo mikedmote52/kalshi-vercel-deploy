@@ -2,68 +2,8 @@
   "generated_at": "2026-04-11T00:15:38.725888",
   "balance": 60.01,
   "total_pnl": 0,
-  "positions": [
-    {
-      "ticker": "KXEARTHQUAKECALIFORNIA-35",
-      "title": "Will there be an at least 8.0 magnitude earthquake in California before 2035?",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.25,
-      "market_probability": 0.51,
-      "edge": 0.195,
-      "thesis": "Market significantly overprices rare geological events based on popular fear rather than statistical frequency."
-    },
-    {
-      "ticker": "KXPRIMEENGCONSUMPTION-30-OIL",
-      "title": "Oil largest energy source in 2030",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.7,
-      "market_probability": 0.56,
-      "edge": 0.14,
-      "thesis": "Energy transitions occur over decades, and oil infrastructure advantages persist through 2030."
-    },
-    {
-      "ticker": "KXOAIANTH-40-ANTH",
-      "title": "Will Open AI or Anthropic IPO first?",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.55,
-      "market_probability": 0.78,
-      "edge": 0.115,
-      "thesis": "Market overweights Anthropic's chances given recent signals that OpenAI is advancing toward public markets."
-    },
-    {
-      "ticker": "KXTRILLIONAIRE-30-EM",
-      "title": "Will Elon Musk be the world's first trillionaire?",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.65,
-      "market_probability": 0.88,
-      "edge": 0.17250000000000001,
-      "thesis": "Multiple viable candidates exist and market volatility over 4 years creates significant downside risk to Musk's current advantages."
-    },
-    {
-      "ticker": "KXMUSKTRILLION-27",
-      "title": "Musk trillionaire by 2027",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.35,
-      "market_probability": 0.77,
-      "edge": 0.42,
-      "thesis": "Mathematical improbability of required asset appreciation in remaining timeframe."
-    }
-  ],
+  "positions": 5,
+  "markets_scanned": 123,
   "latest_scan": {
     "timestamp": "2026-04-11T00:15:29.948184",
     "markets_pulled": 123,
