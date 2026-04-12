@@ -224,8 +224,13 @@ function App() {
   const balance = liveBalance !== null ? liveBalance : data.balance;
   const positions = livePositions !== null ? livePositions : (Array.isArray(data.positions) ? data.positions.length : (data.positions || 0));
 
-  // Build a set of held tickers for cross-referencing
-  const heldTickerSet = new Set((positionDetails || []).map(p => p.ticker));
+  // Build a set of held tickers for cross-referencing (live API with static fallback)
+  const heldTickerSet = new Set(
+    (positionDetails && positionDetails.length > 0
+      ? positionDetails
+      : data.position_details || []
+    ).map(p => p.ticker)
+  );
 
   return (
     <div className="container">
@@ -267,7 +272,7 @@ function App() {
 
       <div className="tabs">
         <div className={`tab ${tab === 'opportunities' ? 'active' : ''}`} onClick={() => setTab('opportunities')}>
-          Opportunities ({opps.filter(o => !heldTickerSet.has(o.ticker)).length})
+          Opportunities ({opps.length})
         </div>
         <div className={`tab ${tab === 'positions' ? 'active' : ''}`} onClick={() => { setTab('positions'); refreshPositions(); }}>
           Current Positions ({positions})
@@ -284,37 +289,52 @@ function App() {
         <div>
           {(() => {
             const newOpps = opps.filter(o => !heldTickerSet.has(o.ticker));
-            const heldCount = opps.length - newOpps.length;
+            const heldOpps = opps.filter(o => heldTickerSet.has(o.ticker));
             return (
               <React.Fragment>
-                {heldCount > 0 && (
-                  <div className="held-banner" style={{marginBottom: 12}}>
-                    <span className="held-info">{heldCount} {heldCount > 1 ? 'opportunities' : 'opportunity'} already in your portfolio</span>
-                    <span className="held-detail">Manage on Current Positions tab</span>
+                {newOpps.length > 0 && (
+                  <div style={{marginBottom: 8, color: '#9ca3af', fontSize: 13}}>
+                    {newOpps.length} new {newOpps.length === 1 ? 'opportunity' : 'opportunities'}
                   </div>
+                )}
+                {newOpps.map(opp => (
+                  <OpportunityCard
+                    key={opp.ticker}
+                    opp={opp}
+                    amount={amounts[opp.ticker] || 2}
+                    setAmount={(v) => setAmounts(prev => ({...prev, [opp.ticker]: v}))}
+                    decision={decisions[opp.ticker]}
+                    executing={executing[opp.ticker]}
+                    result={results[opp.ticker]}
+                    onExecute={() => executeTrade(opp.ticker, opp.side, amounts[opp.ticker] || 2)}
+                    onReject={() => setDecisions(prev => ({...prev, [opp.ticker]: "rejected"}))}
+                  />
+                ))}
+                {heldOpps.length > 0 && (
+                  <div style={{marginTop: newOpps.length > 0 ? 20 : 0, marginBottom: 8, color: '#9ca3af', fontSize: 13}}>
+                    {heldOpps.length} already held — add to position or skip
+                  </div>
+                )}
+                {heldOpps.map(opp => (
+                  <OpportunityCard
+                    key={opp.ticker}
+                    opp={opp}
+                    isHeld={true}
+                    amount={amounts[opp.ticker] || 2}
+                    setAmount={(v) => setAmounts(prev => ({...prev, [opp.ticker]: v}))}
+                    decision={decisions[opp.ticker]}
+                    executing={executing[opp.ticker]}
+                    result={results[opp.ticker]}
+                    onExecute={() => executeTrade(opp.ticker, opp.side, amounts[opp.ticker] || 2)}
+                    onReject={() => setDecisions(prev => ({...prev, [opp.ticker]: "rejected"}))}
+                  />
+                ))}
+                {opps.length === 0 && (
+                  <div className="empty">No opportunities found. Run a scan to discover mispricings.</div>
                 )}
               </React.Fragment>
             );
           })()}
-          {opps.filter(o => !heldTickerSet.has(o.ticker)).length === 0 ? (
-            <div className="empty">
-              {opps.length > 0
-                ? "All current opportunities are already in your portfolio. Check the Current Positions tab."
-                : "No opportunities found. Run a scan to discover mispricings."}
-            </div>
-          ) : opps.filter(o => !heldTickerSet.has(o.ticker)).map(opp => (
-            <OpportunityCard
-              key={opp.ticker}
-              opp={opp}
-              amount={amounts[opp.ticker] || 2}
-              setAmount={(v) => setAmounts(prev => ({...prev, [opp.ticker]: v}))}
-              decision={decisions[opp.ticker]}
-              executing={executing[opp.ticker]}
-              result={results[opp.ticker]}
-              onExecute={() => executeTrade(opp.ticker, opp.side, amounts[opp.ticker] || 2)}
-              onReject={() => setDecisions(prev => ({...prev, [opp.ticker]: "rejected"}))}
-            />
-          ))}
         </div>
       )}
 
@@ -605,7 +625,7 @@ function App() {
   );
 }
 
-function OpportunityCard({ opp, amount, setAmount, decision, executing, result, onExecute, onReject }) {
+function OpportunityCard({ opp, isHeld, amount, setAmount, decision, executing, result, onExecute, onReject }) {
   const [largeTradePending, setLargeTradePending] = React.useState(false);
   React.useEffect(() => { setLargeTradePending(false); }, [amount]);
 
@@ -623,14 +643,15 @@ function OpportunityCard({ opp, amount, setAmount, decision, executing, result, 
   const isDone = decision === "executed" || decision === "rejected";
 
   return (
-    <div className="opp-card" style={isDone ? {opacity: .5} : {}}>
+    <div className="opp-card" style={isDone ? {opacity: .5} : isHeld ? {borderLeft: '3px solid #3b82f6'} : {}}>
       <div className="opp-header">
         <div className="opp-title">
           {opp.title}
+          {isHeld && <span className="badge" style={{marginLeft: 8, background: '#3b82f6', color: '#fff', padding: '2px 8px', borderRadius: 4, fontSize: 11}}>HELD</span>}
           {opp._related_count > 0 && <span className="related-badge">+{opp._related_count} related</span>}
         </div>
         <span className={`opp-side ${opp.side === 'yes' ? 'side-yes' : 'side-no'}`}>
-          BUY {opp.side?.toUpperCase()}
+          {isHeld ? 'ADD' : 'BUY'} {opp.side?.toUpperCase()}
         </span>
       </div>
 
