@@ -131,6 +131,7 @@ function App() {
   const [addAmounts, setAddAmounts] = useState({});
   const [addExecuting, setAddExecuting] = useState({});
   const [addResults, setAddResults] = useState({});
+  const [heartbeat, setHeartbeat] = useState(null);
 
   // Load dashboard data
   useEffect(() => {
@@ -143,6 +144,14 @@ function App() {
         setAmounts(initAmounts);
       })
       .catch(e => console.error("Failed to load data:", e));
+  }, []);
+
+  // Load pipeline heartbeat for staleness detection
+  useEffect(() => {
+    fetch("/heartbeat.json?" + Date.now())
+      .then(r => r.json())
+      .then(h => setHeartbeat(h))
+      .catch(() => {});
   }, []);
 
   // Fetch live balance
@@ -217,6 +226,22 @@ function App() {
     }
   };
 
+  // Pipeline staleness check
+  const pipelineWarning = (() => {
+    if (!heartbeat) return null;
+    const now = Date.now();
+    const startedMs = heartbeat.started_at ? new Date(heartbeat.started_at).getTime() : null;
+    const exportedMs = heartbeat.exported_at ? new Date(heartbeat.exported_at).getTime() : null;
+    const hoursAgo = startedMs ? (now - startedMs) / 3600000 : null;
+    if (startedMs && !exportedMs) {
+      return { level: 'error', msg: `Pipeline ran ${hoursAgo < 1 ? 'recently' : Math.round(hoursAgo) + 'h ago'} but export failed — data may be stale.` };
+    }
+    if (hoursAgo !== null && hoursAgo > 26) {
+      return { level: 'warn', msg: `Pipeline last ran ${Math.round(hoursAgo)}h ago — data may be stale. Check the refresh cron.` };
+    }
+    return null;
+  })();
+
   if (!data) return <div className="container"><div className="empty">Loading dashboard...</div></div>;
 
   const opps = data.opportunities || [];
@@ -243,6 +268,20 @@ function App() {
           </span>
         </div>
       </div>
+
+      {pipelineWarning && (
+        <div style={{
+          margin: '8px 0',
+          padding: '8px 12px',
+          borderRadius: 6,
+          fontSize: 12,
+          background: pipelineWarning.level === 'error' ? 'rgba(218,54,51,.15)' : 'rgba(210,153,34,.15)',
+          border: `1px solid ${pipelineWarning.level === 'error' ? '#da3633' : '#d29922'}`,
+          color: pipelineWarning.level === 'error' ? '#f85149' : '#d29922',
+        }}>
+          ⚠ {pipelineWarning.msg}
+        </div>
+      )}
 
       <div className="stats">
         <div className="stat-card">
@@ -617,8 +656,122 @@ function App() {
       )}
 
       {tab === "calibration" && (
-        <div className="empty">
-          Calibration tracking will populate as trades resolve. The system tracks Brier scores to measure how well AI probability estimates match outcomes over time.
+        <div>
+          {/* Performance summary */}
+          {data.performance && (
+            <div className="stats" style={{marginBottom: 16}}>
+              <div className="stat-card">
+                <div className="label">Brier Score</div>
+                <div className="value" style={{color: data.performance.brier_score < 0.18 ? '#3fb950' : data.performance.brier_score < 0.25 ? '#d29922' : '#f85149'}}>
+                  {data.performance.brier_score != null ? data.performance.brier_score.toFixed(3) : '—'}
+                </div>
+              </div>
+              <div className="stat-card">
+                <div className="label">Win Rate</div>
+                <div className="value">{data.performance.total_trades > 0 ? Math.round(data.performance.wins / data.performance.total_trades * 100) + '%' : '—'}</div>
+              </div>
+              <div className="stat-card">
+                <div className="label">Avg Edge</div>
+                <div className="value">{data.performance.avg_edge != null ? (data.performance.avg_edge * 100).toFixed(1) + '%' : '—'}</div>
+              </div>
+              <div className="stat-card">
+                <div className="label">Resolved Trades</div>
+                <div className="value">{data.performance.total_trades || 0}</div>
+              </div>
+            </div>
+          )}
+
+          {/* Brier score legend */}
+          <div style={{background: '#161b22', border: '1px solid #30363d', borderRadius: 8, padding: '10px 14px', marginBottom: 16, fontSize: 12, color: '#8b949e'}}>
+            <strong style={{color: '#e1e4e8'}}>Brier Score guide:</strong>
+            {' '}<span style={{color: '#3fb950'}}>{'< 0.12'} excellent</span> ·
+            {' '}<span style={{color: '#3fb950'}}>{'< 0.18'} good</span> ·
+            {' '}<span style={{color: '#d29922'}}>{'< 0.25'} average</span> ·
+            {' '}<span style={{color: '#f85149'}}>0.25 = random</span>
+            {'. Lower is better. Measures how close AI probabilities are to actual outcomes.'}
+          </div>
+
+          {/* Prediction log */}
+          <div style={{marginBottom: 8, color: '#8b949e', fontSize: 13}}>
+            Prediction Log ({(data.prediction_log || []).length} entries) — all AI estimates, resolved and pending
+          </div>
+          {(data.prediction_log || []).length === 0 ? (
+            <div className="empty">No predictions logged yet. Run a scan to start tracking.</div>
+          ) : (
+            <div>
+              {(data.prediction_log || []).map((p, i) => {
+                const aiPct = p.predicted_probability != null ? Math.round(p.predicted_probability * 100) : null;
+                const mktPct = p.market_price_cents;
+                const resolved = p.outcome != null;
+                const correct = resolved && (
+                  (p.outcome === 'yes' && p.predicted_probability > 0.5) ||
+                  (p.outcome === 'no' && p.predicted_probability < 0.5)
+                );
+                return (
+                  <div key={i} style={{
+                    background: '#161b22',
+                    border: `1px solid ${resolved ? (correct ? 'rgba(63,185,80,.3)' : 'rgba(248,81,73,.3)') : '#30363d'}`,
+                    borderRadius: 8,
+                    padding: '10px 14px',
+                    marginBottom: 8,
+                    fontSize: 12,
+                  }}>
+                    <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8}}>
+                      <div style={{flex: 1}}>
+                        <span style={{color: '#58a6ff', fontWeight: 600, marginRight: 8}}>{p.ticker}</span>
+                        <span style={{color: '#8b949e'}}>{p.title}</span>
+                      </div>
+                      {resolved ? (
+                        <span style={{
+                          padding: '2px 8px', borderRadius: 4, fontSize: 11, fontWeight: 700,
+                          background: correct ? 'rgba(63,185,80,.2)' : 'rgba(248,81,73,.2)',
+                          color: correct ? '#3fb950' : '#f85149',
+                          whiteSpace: 'nowrap',
+                        }}>
+                          {p.outcome.toUpperCase()} {correct ? '✓' : '✗'}
+                        </span>
+                      ) : (
+                        <span style={{padding: '2px 8px', borderRadius: 4, fontSize: 11, background: 'rgba(139,148,158,.1)', color: '#8b949e', whiteSpace: 'nowrap'}}>OPEN</span>
+                      )}
+                    </div>
+                    <div style={{display: 'flex', gap: 16, marginTop: 6, flexWrap: 'wrap', color: '#8b949e'}}>
+                      <span>AI: <strong style={{color: '#e1e4e8'}}>{aiPct != null ? aiPct + '%' : '—'}</strong></span>
+                      <span>Market: <strong style={{color: '#e1e4e8'}}>{mktPct != null ? mktPct + 'c' : '—'}</strong></span>
+                      <span>Edge: <strong style={{color: '#d29922'}}>{p.edge != null ? (p.edge * 100).toFixed(1) + '%' : '—'}</strong></span>
+                      <span>Conf: <strong className={`conf-${p.confidence}`}>{p.confidence || '—'}</strong></span>
+                      {p.brier_contribution != null && (
+                        <span>Brier: <strong style={{color: p.brier_contribution < 0.1 ? '#3fb950' : '#d29922'}}>{p.brier_contribution.toFixed(3)}</strong></span>
+                      )}
+                      <span style={{marginLeft: 'auto', color: '#484f58'}}>{p.logged_at ? new Date(p.logged_at).toLocaleDateString() : ''}</span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Cross-platform snapshots */}
+          {(data.cross_platform_snapshots || []).length > 0 && (
+            <div style={{marginTop: 24}}>
+              <div style={{marginBottom: 8, color: '#8b949e', fontSize: 13}}>
+                Cross-Platform Snapshots ({data.cross_platform_snapshots.length}) — same event priced on multiple markets
+              </div>
+              {data.cross_platform_snapshots.map((s, i) => (
+                <div key={i} style={{background: '#161b22', border: '1px solid #30363d', borderRadius: 8, padding: '10px 14px', marginBottom: 8, fontSize: 12}}>
+                  <div style={{display: 'flex', justifyContent: 'space-between', gap: 8}}>
+                    <div>
+                      <span style={{color: '#58a6ff', fontWeight: 600, marginRight: 8}}>{s.ticker}</span>
+                      <span style={{color: '#a371f7', marginRight: 8}}>{s.platform.toUpperCase()}</span>
+                      <span style={{color: '#8b949e'}}>{s.title}</span>
+                    </div>
+                    <strong style={{color: '#e1e4e8', whiteSpace: 'nowrap'}}>{s.yes_price_cents != null ? s.yes_price_cents + 'c' : '—'}</strong>
+                  </div>
+                  {s.notes && <div style={{color: '#8b949e', marginTop: 4}}>{s.notes}</div>}
+                  <div style={{color: '#484f58', marginTop: 4}}>{s.snapshot_at ? new Date(s.snapshot_at).toLocaleString() : ''}</div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>
