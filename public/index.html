@@ -133,17 +133,103 @@ function App() {
   const [addResults, setAddResults] = useState({});
   const [heartbeat, setHeartbeat] = useState(null);
 
-  // Load dashboard data
+  // Load dashboard data + live scanner output, merge both
   useEffect(() => {
-    fetch("/dashboard_data.json?" + Date.now())
-      .then(r => r.json())
-      .then(d => {
-        setData(d);
-        const initAmounts = {};
-        (d.opportunities || []).forEach(o => { initAmounts[o.ticker] = 2.0; });
-        setAmounts(initAmounts);
-      })
-      .catch(e => console.error("Failed to load data:", e));
+    const loadAll = async () => {
+      let base = {};
+      try {
+        const r = await fetch("/dashboard_data.json?" + Date.now());
+        base = await r.json();
+      } catch (e) { console.error("Failed to load static data:", e); }
+
+      let scan = null;
+      try {
+        const r = await fetch("/api/scan?" + Date.now());
+        if (r.ok) scan = await r.json();
+      } catch (e) { console.warn("Live scanner unreachable:", e); }
+
+      const staticOpps = base.opportunities || [];
+      const liveOpps = scan?.opportunities || [];
+      // Dedupe by ticker, preferring live scanner entries (fresher)
+      const seen = new Set();
+      const merged = [];
+      for (const o of [...liveOpps, ...staticOpps]) {
+        if (!o?.ticker || seen.has(o.ticker)) continue;
+        seen.add(o.ticker);
+        merged.push(o);
+      }
+
+      // Derive prediction_log + performance from trade_history.
+      // Each trade's ai_probability is the prediction; resolution comes from status/pnl.
+      const trades = base.trade_history || [];
+      const predLog = trades.map((t, i) => {
+        const resolved = t.status === "resolved" || t.status === "closed" || t.resolution != null;
+        let outcome = null;
+        if (resolved) {
+          if (t.resolution === "yes" || t.resolution === "no") outcome = t.resolution;
+          else if (typeof t.pnl_dollars === "number") {
+            // Positive PnL on a "yes" bet → yes resolved. On a "no" bet → no resolved.
+            const won = t.pnl_dollars > 0;
+            outcome = (t.side === "yes") === won ? "yes" : "no";
+          }
+        }
+        let brier = null;
+        if (outcome != null && typeof t.ai_probability === "number") {
+          // Brier for the side actually bet
+          const pYes = t.side === "yes" ? t.ai_probability : 1 - t.ai_probability;
+          const realized = outcome === "yes" ? 1 : 0;
+          brier = Math.pow(pYes - realized, 2);
+        }
+        return {
+          ticker: t.ticker,
+          title: t.title,
+          predicted_probability: t.ai_probability,
+          market_price_cents: t.price_cents,
+          edge: t.edge,
+          confidence: t.confidence || "medium",
+          outcome,
+          brier_contribution: brier,
+          logged_at: t.trade_date,
+        };
+      });
+
+      const resolvedEntries = predLog.filter((p) => p.outcome != null && p.brier_contribution != null);
+      const perf = resolvedEntries.length > 0 ? {
+        total_trades: resolvedEntries.length,
+        wins: resolvedEntries.filter((p) =>
+          (p.outcome === "yes" && p.predicted_probability > 0.5) ||
+          (p.outcome === "no" && p.predicted_probability < 0.5)
+        ).length,
+        brier_score: resolvedEntries.reduce((s, p) => s + p.brier_contribution, 0) / resolvedEntries.length,
+        avg_edge: trades.reduce((s, t) => s + (t.edge || 0), 0) / trades.length,
+      } : null;
+
+      const combined = {
+        ...base,
+        opportunities: merged,
+        live_scan: scan,
+        prediction_log: predLog,
+        performance: perf,
+        latest_scan: scan ? {
+          timestamp: scan.generated_at,
+          markets_pulled: (scan.diagnostics?.weather || []).reduce((s, d) => s + (d.markets_scanned || 0), 0)
+            + (scan.diagnostics?.zero_dte || []).reduce((s, d) => s + (d.markets_scanned || 0), 0)
+            + (scan.diagnostics?.econ_calendar || []).reduce((s, d) => s + (d.markets_found || 0), 0),
+          markets_analyzed: scan.summary?.total_opportunities || 0,
+          opportunities_found: scan.opportunities?.length || 0,
+          trades_placed: 0,
+          weather_count: scan.summary?.weather || 0,
+          zero_dte_count: scan.summary?.zero_dte || 0,
+          econ_count: scan.summary?.econ_calendar || 0,
+        } : base.latest_scan,
+      };
+      setData(combined);
+
+      const initAmounts = {};
+      merged.forEach(o => { initAmounts[o.ticker] = 2.0; });
+      setAmounts(initAmounts);
+    };
+    loadAll();
   }, []);
 
   // Load pipeline heartbeat for staleness detection
@@ -305,9 +391,25 @@ function App() {
       <div style={{textAlign: 'right', marginBottom: 4}}>
         <button className="refresh-btn" onClick={refreshBalance}>Refresh Balance</button>
         <span style={{fontSize: 11, color: '#484f58', marginLeft: 8}}>
-          Data: {data.generated ? new Date(data.generated).toLocaleString() : "—"}
+          Data: {data.generated_at ? new Date(data.generated_at).toLocaleString()
+            : data.live_scan?.generated_at ? new Date(data.live_scan.generated_at).toLocaleString()
+            : "—"}
         </span>
       </div>
+
+      {data.live_scan && (
+        <div style={{
+          fontSize: 11, color: '#9ca3af', marginBottom: 10,
+          padding: '6px 10px', background: '#161b22', borderRadius: 6,
+          border: '1px solid #30363d', display: 'flex', gap: 14, flexWrap: 'wrap'
+        }}>
+          <span>Live scan: <strong style={{color: '#79c0ff'}}>{data.live_scan.elapsed_ms}ms</strong></span>
+          <span>Weather: {data.live_scan.summary?.weather || 0}</span>
+          <span>0DTE: {data.live_scan.summary?.zero_dte || 0}</span>
+          <span>Econ: {data.live_scan.summary?.econ_calendar || 0}</span>
+          <span style={{color: '#484f58'}}>as of {new Date(data.live_scan.generated_at).toLocaleTimeString()}</span>
+        </div>
+      )}
 
       <div className="tabs">
         <div className={`tab ${tab === 'opportunities' ? 'active' : ''}`} onClick={() => setTab('opportunities')}>

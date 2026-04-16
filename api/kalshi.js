@@ -106,4 +106,49 @@ async function placeOrder(body) {
   return request("POST", "/portfolio/orders", body);
 }
 
-module.exports = { getBalance, getPositions, getMarket, placeOrder };
+// List markets with filter. Used by scanner to find weather / index brackets.
+// opts: { event_ticker, series_ticker, status, limit, cursor }
+async function listMarkets(opts = {}) {
+  const params = new URLSearchParams();
+  if (opts.event_ticker) params.set("event_ticker", opts.event_ticker);
+  if (opts.series_ticker) params.set("series_ticker", opts.series_ticker);
+  params.set("status", opts.status || "open");
+  params.set("limit", String(opts.limit || 200));
+  if (opts.cursor) params.set("cursor", opts.cursor);
+  const data = await request("GET", `/markets?${params.toString()}`);
+  return data;
+}
+
+async function listEvents(opts = {}) {
+  const params = new URLSearchParams();
+  if (opts.series_ticker) params.set("series_ticker", opts.series_ticker);
+  params.set("status", opts.status || "open");
+  params.set("limit", String(opts.limit || 200));
+  if (opts.cursor) params.set("cursor", opts.cursor);
+  const data = await request("GET", `/events?${params.toString()}`);
+  return data;
+}
+
+// Search all markets across many pages. Safe for use inside a 30s serverless limit.
+async function listAllMarkets(opts = {}, maxPages = 3) {
+  let all = [];
+  let cursor = null;
+  for (let i = 0; i < maxPages; i++) {
+    const page = await listMarkets({ ...opts, cursor });
+    if (Array.isArray(page.markets)) all = all.concat(page.markets);
+    cursor = page.cursor;
+    if (!cursor) break;
+  }
+  return all;
+}
+
+module.exports = {
+  getBalance,
+  getPositions,
+  getMarket,
+  placeOrder,
+  listMarkets,
+  listEvents,
+  listAllMarkets,
+  request,
+};
