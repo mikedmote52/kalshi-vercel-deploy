@@ -138,7 +138,7 @@ function App() {
     const loadAll = async () => {
       let base = {};
       try {
-        const r = await fetch("/dashboard_data.json?" + Date.now());
+        const r = await fetch("dashboard_data.json?" + Date.now());
         base = await r.json();
       } catch (e) { console.error("Failed to load static data:", e); }
 
@@ -234,7 +234,7 @@ function App() {
 
   // Load pipeline heartbeat for staleness detection
   useEffect(() => {
-    fetch("/heartbeat.json?" + Date.now())
+    fetch("heartbeat.json?" + Date.now())
       .then(r => r.json())
       .then(h => setHeartbeat(h))
       .catch(() => {});
@@ -242,7 +242,7 @@ function App() {
 
   // Fetch live balance
   const refreshBalance = useCallback(() => {
-    fetch("/dashboard_data.json?" + Date.now())
+    fetch("/api/balance")
       .then(r => r.json())
       .then(d => {
         setLiveBalance(d.balance);
@@ -256,10 +256,10 @@ function App() {
   // Fetch enriched position data
   const refreshPositions = useCallback(() => {
     setPositionsLoading(true);
-    fetch("/dashboard_data.json?" + Date.now())
+    fetch("/api/positions?" + Date.now())
       .then(r => r.json())
       .then(d => {
-        setPositionDetails(d.position_details || []);
+        setPositionDetails(d.positions || []);
         setPositionsLoading(false);
       })
       .catch(() => setPositionsLoading(false));
