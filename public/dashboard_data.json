@@ -1,235 +1,17 @@
 {
-  "generated_at": "2026-04-12T18:30:40.575515",
+  "generated_at": "2026-04-16T21:10:28.162Z",
   "balance": 43.89,
   "total_pnl": 0,
-  "positions": 10,
-  "position_details": [
-    {
-      "ticker": "KXG7LEADEROUT-45JAN01-KSTA",
-      "title": "Will Prime Minister of the United Kingdom be the first to leave office?",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.35,
-      "market_probability": 0.54,
-      "edge": 0.14250000000000002,
-      "thesis": "Other G7 leaders face significant political challenges and the 20-year timeframe makes UK PM advantage less decisive."
-    },
-    {
-      "ticker": "KXTIMEDECADE20S-30-EMUS",
-      "title": "Who will Time name as Person of the Decade? Elon Musk",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.45,
-      "market_probability": 0.34,
-      "edge": 0.11,
-      "thesis": "Musk has dominated multiple transformative industries this decade and fits Time's preference for influential, controversial figures."
-    },
-    {
-      "ticker": "AMAZONFTC-29DEC31",
-      "title": "Court finds Amazon illegally maintained monopoly",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.45,
-      "market_probability": 0.56,
-      "edge": 0.11,
-      "thesis": "Amazon's diverse business model and competitive marketplace dynamics make monopoly harder to prove than Google's search dominance."
-    },
-    {
-      "ticker": "KXELONMARS-99",
-      "title": "Elon Musk visits Mars by 2099",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.25,
-      "market_probability": 0.1,
-      "edge": 0.15,
-      "thesis": "Seven decades of technological advancement makes Mars travel highly probable, with Musk's resources providing access."
-    },
-    {
-      "ticker": "KXEARTHQUAKEJAPAN-30",
-      "title": "Will there be an at least 8.0 magnitude earthquake in Japan before 2030?",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.35,
-      "market_probability": 0.54,
-      "edge": 0.14250000000000002,
-      "thesis": "Historical base rates show 8.0+ earthquakes occur roughly every 20-30 years in Japan, making 4-year window overpriced."
-    },
-    {
-      "ticker": "KXEARTHQUAKECALIFORNIA-35",
-      "title": "Will there be an at least 8.0 magnitude earthquake in California before 2035?",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.25,
-      "market_probability": 0.51,
-      "edge": 0.195,
-      "thesis": "Market significantly overprices rare geological events based on popular fear rather than statistical frequency."
-    },
-    {
-      "ticker": "KXPRIMEENGCONSUMPTION-30-OIL",
-      "title": "Oil largest energy source in 2030",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.7,
-      "market_probability": 0.56,
-      "edge": 0.14,
-      "thesis": "Energy transitions occur over decades, and oil infrastructure advantages persist through 2030."
-    },
-    {
-      "ticker": "KXOAIANTH-40-ANTH",
-      "title": "Will Open AI or Anthropic IPO first?",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.55,
-      "market_probability": 0.78,
-      "edge": 0.115,
-      "thesis": "Market overweights Anthropic's chances given recent signals that OpenAI is advancing toward public markets."
-    },
-    {
-      "ticker": "KXTRILLIONAIRE-30-EM",
-      "title": "Will Elon Musk be the world's first trillionaire?",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.65,
-      "market_probability": 0.88,
-      "edge": 0.17250000000000001,
-      "thesis": "Multiple viable candidates exist and market volatility over 4 years creates significant downside risk to Musk's current advantages."
-    },
-    {
-      "ticker": "KXMUSKTRILLION-27",
-      "title": "Musk trillionaire by 2027",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.35,
-      "market_probability": 0.77,
-      "edge": 0.42,
-      "thesis": "Mathematical improbability of required asset appreciation in remaining timeframe."
-    }
-  ],
+  "positions": 0,
+  "position_details": [],
   "latest_scan": {
-    "timestamp": "2026-04-12T13:04:00.857741",
-    "markets_pulled": 123,
-    "markets_analyzed": 123,
-    "opportunities_found": 6,
+    "timestamp": "2026-04-16T21:10:28.162Z",
+    "markets_pulled": 0,
+    "markets_analyzed": 0,
+    "opportunities_found": 0,
     "trades_placed": 0
   },
-  "opportunities": [
-    {
-      "ticker": "KXOAIANTH-40-ANTH",
-      "title": "Will OpenAI or Anthropic IPO first? Anthropic",
-      "side": "no",
-      "ai_prob": 0.6,
-      "market_prob": 0.78,
-      "edge": 0.135,
-      "confidence": "medium",
-      "reasoning": "Recent news suggests Anthropic revenue surge, but OpenAI still has massive scale advantage and more IPO pressure from investors. Market overweighting recent Anthropic momentum.",
-      "thesis": "OpenAI's scale and investor pressure make it more likely to IPO first despite recent Anthropic gains.",
-      "counter_thesis": "Anthropic's cleaner governance and recent revenue growth could accelerate IPO timeline.",
-      "red_team_flaw": "The AI may be underestimating how Anthropic's recent partnerships with Google and Amazon provide both the capital buffer and strategic positioning needed to accelerate their IPO timeline ahead of OpenAI.",
-      "red_team_strength": "moderate",
-      "related_count": 0,
-      "suggested_size": 2.53
-    },
-    {
-      "ticker": "KXELONMARS-99",
-      "title": "Will Elon Musk visit Mars before Aug 1, 2099?",
-      "side": "yes",
-      "ai_prob": 0.35,
-      "market_prob": 0.1,
-      "edge": 0.25,
-      "confidence": "low",
-      "reasoning": "73-year timeline is enormous, and SpaceX has made real progress on Mars architecture. Even if Musk is old, life extension tech could help. Market severely underpricing long timeline.",
-      "thesis": "Massive timeline plus SpaceX's genuine progress makes 10% far too low.",
-      "counter_thesis": "Mars missions may remain robotic, and human travel risks could prove insurmountable.",
-      "red_team_flaw": "The market appropriately accounts for the fact that no human has ever survived more than a few months in deep space, and Mars missions would require 2+ year journeys with currently unproven life support technology.",
-      "red_team_strength": "weak",
-      "related_count": 0,
-      "suggested_size": 3.05
-    },
-    {
-      "ticker": "KXTRILLIONAIRE-30-EM",
-      "title": "Will Elon Musk be the world's first trillionaire?",
-      "side": "no",
-      "ai_prob": 0.75,
-      "market_prob": 0.91,
-      "edge": 0.12,
-      "confidence": "medium",
-      "reasoning": "While Musk is clearly frontrunner, 91% seems too high given competition from other tech moguls and potential wealth volatility. Jensen Huang, Bezos, and others could surge.",
-      "thesis": "Market overconfident in Musk's lead when other billionaires could catch up by 2030.",
-      "counter_thesis": "SpaceX and Tesla's exponential growth trajectories make Musk's wealth acceleration hard to match.",
-      "red_team_flaw": "Musk's wealth concentration in two highly speculative companies makes him more vulnerable to dramatic wealth swings than competitors with diversified holdings.",
-      "red_team_strength": "moderate",
-      "related_count": 0,
-      "suggested_size": 1.93
-    },
-    {
-      "ticker": "AMAZONFTC-29DEC31",
-      "title": "Court finds Amazon illegally maintained monopoly",
-      "side": "no",
-      "ai_prob": 0.45,
-      "market_prob": 0.56,
-      "edge": 0.11,
-      "confidence": "medium",
-      "reasoning": "Google precedent shows courts willing to rule against big tech, but Amazon's case is more complex with multiple business lines. Legal proceedings are inherently uncertain with appeals processes.",
-      "thesis": "Amazon's diverse business model and competitive marketplace dynamics make monopoly harder to prove than Google's search dominance.",
-      "counter_thesis": "Google precedent and mounting regulatory pressure create favorable environment for government victory.",
-      "red_team_flaw": "",
-      "red_team_strength": "",
-      "related_count": 0,
-      "suggested_size": 2.16
-    },
-    {
-      "ticker": "KXTIMEDECADE20S-30-EMUS",
-      "title": "Elon Musk named Time Person of Decade",
-      "side": "yes",
-      "ai_prob": 0.45,
-      "market_prob": 0.34,
-      "edge": 0.11,
-      "confidence": "medium",
-      "reasoning": "Musk's influence across multiple transformative industries (EVs, space, AI, social media) and cultural impact makes him strong contender. Time tends to pick figures who defined the era.",
-      "thesis": "Musk's unprecedented influence across technology, space exploration, and global discourse positions him as decade-defining figure.",
-      "counter_thesis": "Political polarization around Musk or emergence of more universally respected figure could diminish his chances.",
-      "red_team_flaw": "",
-      "red_team_strength": "",
-      "related_count": 0,
-      "suggested_size": 1.83
-    },
-    {
-      "ticker": "KXG7LEADEROUT-45JAN01-KSTA",
-      "title": "Keir Starmer first G7 leader to leave office",
-      "side": "no",
-      "ai_prob": 0.35,
-      "market_prob": 0.54,
-      "edge": 0.19,
-      "confidence": "low",
-      "reasoning": "UK political instability precedent exists, but Starmer recently took office. Long timeframe to 2045 makes this highly uncertain with many variables affecting all G7 leaders.",
-      "thesis": "UK's political volatility and potential economic challenges could force early Starmer departure.",
-      "counter_thesis": "Other G7 leaders face equal or greater political pressures, and 20-year timeframe makes this essentially random.",
-      "red_team_flaw": "",
-      "red_team_strength": "",
-      "related_count": 0,
-      "suggested_size": 3.86
-    }
-  ],
+  "opportunities": [],
   "trade_history": [
     {
       "trade_date": "2026-04-12",
@@ -523,7 +305,7 @@
     {
       "trade_date": "2026-04-06",
       "ticker": "KXWARMING-50",
-      "title": "World passes 2\u00b0C warming before 2050",
+      "title": "World passes 2°C warming before 2050",
       "side": "no",
       "contracts": 12,
       "price_cents": 19,
@@ -531,8 +313,8 @@
       "ai_probability": 0.7,
       "market_probability": 0.81,
       "edge": 0.11,
-      "thesis": "Accelerating clean energy deployment and breakthrough technologies could keep warming below 2\u00b0C through 2050.",
-      "counter_thesis": "Current emissions trajectory and climate feedback loops make 2\u00b0C threshold crossing highly likely despite policy efforts.",
+      "thesis": "Accelerating clean energy deployment and breakthrough technologies could keep warming below 2°C through 2050.",
+      "counter_thesis": "Current emissions trajectory and climate feedback loops make 2°C threshold crossing highly likely despite policy efforts.",
       "status": "open",
       "resolution": null,
       "pnl_dollars": 0
@@ -793,5 +575,71 @@
       "pnl_dollars": 0
     }
   ],
-  "performance": null
+  "performance": null,
+  "elapsed_ms": 3545,
+  "diagnostics": {
+    "weather": [
+      {
+        "city": "NYC",
+        "forecast": {
+          "raw_forecast_f": 89,
+          "corrected_f": 90,
+          "period_name": "This Afternoon",
+          "period_start": "2026-04-16T17:00:00-04:00"
+        },
+        "markets_scanned": 0,
+        "error": "kalshi list: KALSHI_PEM_KEY not configured"
+      },
+      {
+        "city": "Chicago",
+        "forecast": {
+          "raw_forecast_f": 69,
+          "corrected_f": 69.5,
+          "period_name": "This Afternoon",
+          "period_start": "2026-04-16T16:00:00-05:00"
+        },
+        "markets_scanned": 0,
+        "error": "kalshi list: KALSHI_PEM_KEY not configured"
+      },
+      {
+        "city": "Miami",
+        "forecast": {
+          "raw_forecast_f": 80,
+          "corrected_f": 83,
+          "period_name": "This Afternoon",
+          "period_start": "2026-04-16T17:00:00-04:00"
+        },
+        "markets_scanned": 0,
+        "error": "kalshi list: KALSHI_PEM_KEY not configured"
+      },
+      {
+        "city": "Austin",
+        "forecast": {
+          "raw_forecast_f": 89,
+          "corrected_f": 90.5,
+          "period_name": "This Afternoon",
+          "period_start": "2026-04-16T16:00:00-05:00"
+        },
+        "markets_scanned": 0,
+        "error": "kalshi list: KALSHI_PEM_KEY not configured"
+      }
+    ],
+    "zero_dte": [
+      {
+        "index": "S&P 500",
+        "spot": 7041.28,
+        "vix": 17.94,
+        "markets_scanned": 0,
+        "error": "kalshi: KALSHI_PEM_KEY not configured"
+      },
+      {
+        "index": "Nasdaq 100",
+        "spot": 26333,
+        "vix": 22.18,
+        "markets_scanned": 0,
+        "error": "kalshi: KALSHI_PEM_KEY not configured"
+      }
+    ],
+    "econ_calendar": []
+  }
 }
