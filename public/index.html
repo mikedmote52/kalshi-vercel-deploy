@@ -242,7 +242,7 @@ function App() {
 
   // Fetch live balance
   const refreshBalance = useCallback(() => {
-    fetch("/api/balance")
+    fetch("/dashboard_data.json?" + Date.now())
       .then(r => r.json())
       .then(d => {
         setLiveBalance(d.balance);
@@ -256,10 +256,10 @@ function App() {
   // Fetch enriched position data
   const refreshPositions = useCallback(() => {
     setPositionsLoading(true);
-    fetch("/api/positions?" + Date.now())
+    fetch("/dashboard_data.json?" + Date.now())
       .then(r => r.json())
       .then(d => {
-        setPositionDetails(d.positions || []);
+        setPositionDetails(d.position_details || []);
         setPositionsLoading(false);
       })
       .catch(() => setPositionsLoading(false));
