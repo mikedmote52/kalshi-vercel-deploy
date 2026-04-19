@@ -94,7 +94,11 @@ async function getBalance() {
 
 async function getPositions() {
   const data = await request("GET", "/portfolio/positions");
-  return data.market_positions || [];
+  const all = data.market_positions || [];
+  // Only count markets where you still hold contracts.
+  // Kalshi returns resolved/settled positions with position_fp=0 — these would
+  // incorrectly consume slots against MAX_POSITIONS if not filtered out.
+  return all.filter(p => Math.abs(parseFloat(p.position_fp ?? p.position ?? 0)) > 0);
 }
 
 async function getMarket(ticker) {
