@@ -133,10 +133,13 @@ function App() {
   const [addResults, setAddResults] = useState({});
   const [heartbeat, setHeartbeat] = useState(null);
 
+  const [scanRefreshing, setScanRefreshing] = useState(false);
+  const [lastScanAt, setLastScanAt] = useState(null);
+
   // Load dashboard data + live scanner output, merge both
-  useEffect(() => {
-    const loadAll = async () => {
-      let base = {};
+  const loadAll = useCallback(async () => {
+    setScanRefreshing(true);
+    let base = {};
       try {
         const r = await fetch("dashboard_data.json?" + Date.now());
         base = await r.json();
@@ -225,12 +228,24 @@ function App() {
       };
       setData(combined);
 
-      const initAmounts = {};
-      merged.forEach(o => { initAmounts[o.ticker] = 2.0; });
-      setAmounts(initAmounts);
-    };
-    loadAll();
+    setLastScanAt(new Date());
+    setScanRefreshing(false);
+
+    const initAmounts = {};
+    merged.forEach(o => { initAmounts[o.ticker] = 2.0; });
+    setAmounts(prev => {
+      const next = { ...prev };
+      merged.forEach(o => { if (!(o.ticker in next)) next[o.ticker] = 2.0; });
+      return next;
+    });
   }, []);
+
+  // Initial load + auto-refresh every 5 minutes
+  useEffect(() => {
+    loadAll();
+    const interval = setInterval(loadAll, 5 * 60 * 1000);
+    return () => clearInterval(interval);
+  }, [loadAll]);
 
   // Load pipeline heartbeat for staleness detection
   useEffect(() => {
@@ -251,7 +266,12 @@ function App() {
       .catch(() => {});
   }, []);
 
-  useEffect(() => { refreshBalance(); }, [refreshBalance]);
+  // Poll balance every 60 seconds so position count stays current
+  useEffect(() => {
+    refreshBalance();
+    const interval = setInterval(refreshBalance, 60 * 1000);
+    return () => clearInterval(interval);
+  }, [refreshBalance]);
 
   // Fetch enriched position data
   const refreshPositions = useCallback(() => {
