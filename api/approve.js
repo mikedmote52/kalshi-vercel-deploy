@@ -6,7 +6,6 @@
 const { getBalance, getPositions, getMarket, placeOrder } = require("./kalshi");
 
 const MAX_PER_POSITION = 500;
-const MAX_POSITIONS = 10;
 
 module.exports = async function handler(req, res) {
   // CORS
@@ -33,9 +32,6 @@ module.exports = async function handler(req, res) {
     const heldTickers = new Set(positions.map((p) => p.ticker || ""));
     const alreadyHeld = heldTickers.has(ticker);
 
-    if (!alreadyHeld && positions.length >= MAX_POSITIONS) {
-      return res.status(400).json({ success: false, error: `Max positions (${MAX_POSITIONS}) reached` });
-    }
 
     if (alreadyHeld && !add_to_position) {
       return res.status(400).json({ success: false, error: `Already have position in ${ticker}. Use add_to_position to increase.` });
