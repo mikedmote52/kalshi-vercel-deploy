@@ -1,10 +1,22 @@
 {
-  "generated_at": "2026-04-19T08:46:16.600195",
-  "pipeline_heartbeat_at": "2026-04-19T08:46:16.600215",
-  "balance": 38.12,
+  "generated_at": "2026-04-19T20:30:01.649932",
+  "pipeline_heartbeat_at": "2026-04-19T20:30:01.649950",
+  "balance": 33.82,
   "total_pnl": 0,
   "positions": 11,
   "position_details": [
+    {
+      "ticker": "KXEARTHQUAKEJAPAN-30",
+      "title": "Will there be an at least 8.0 magnitude earthquake in Japan before 2030?",
+      "side": "",
+      "contracts": 0,
+      "price_cents": 0,
+      "cost_dollars": 0.0,
+      "ai_probability": 0.35,
+      "market_probability": 0.54,
+      "edge": 0.14250000000000002,
+      "thesis": "Historical base rates show 8.0+ earthquakes occur roughly every 20-30 years in Japan, making 4-year window overpriced."
+    },
     {
       "ticker": "KXJPMCEONEW-30-ML",
       "title": "KXJPMCEONEW-30-ML",
@@ -78,18 +90,6 @@
       "thesis": "Seven decades of technological advancement makes Mars travel highly probable, with Musk's resources providing access."
     },
     {
-      "ticker": "KXEARTHQUAKEJAPAN-30",
-      "title": "Will there be an at least 8.0 magnitude earthquake in Japan before 2030?",
-      "side": "",
-      "contracts": 0,
-      "price_cents": 0,
-      "cost_dollars": 0.0,
-      "ai_probability": 0.35,
-      "market_probability": 0.54,
-      "edge": 0.14250000000000002,
-      "thesis": "Historical base rates show 8.0+ earthquakes occur roughly every 20-30 years in Japan, making 4-year window overpriced."
-    },
-    {
       "ticker": "KXPRIMEENGCONSUMPTION-30-OIL",
       "title": "Oil largest energy source in 2030",
       "side": "",
@@ -160,7 +160,7 @@
       "red_team_flaw": "The AI underestimates how the current regulatory environment and recent antitrust victories have fundamentally shifted the playing field against Big Tech.",
       "red_team_strength": "moderate",
       "related_count": 0,
-      "suggested_size": 4.06
+      "suggested_size": 3.6
     },
     {
       "ticker": "KXMUSKTRILLION-27",
@@ -176,7 +176,7 @@
       "red_team_flaw": "A single SpaceX IPO event could instantly bridge the wealth gap, making the AI's gradual growth assumptions irrelevant.",
       "red_team_strength": "moderate",
       "related_count": 3,
-      "suggested_size": 2.07
+      "suggested_size": 1.83
     },
     {
       "ticker": "KXTRILLIONAIRE-30-EM",
@@ -192,7 +192,7 @@
       "red_team_flaw": "Musk's unique positioning across multiple exponential technologies creates such a dominant path to trillionaire status that alternative scenarios are statistically negligible.",
       "red_team_strength": "weak",
       "related_count": 1,
-      "suggested_size": 1.59
+      "suggested_size": 1.41
     },
     {
       "ticker": "KXTAIWANLVL4-27JAN01",
@@ -208,7 +208,7 @@
       "red_team_flaw": "Level 4 advisories require specific, credible threats to civilians that neither side has incentives to create, making political tensions alone insufficient justification.",
       "red_team_strength": "moderate",
       "related_count": 1,
-      "suggested_size": 1.79
+      "suggested_size": 1.59
     },
     {
       "ticker": "KXERUPTSUPER-0-50JAN01",
@@ -224,7 +224,7 @@
       "red_team_flaw": "The AI's geological timescale argument ignores that modern monitoring might detect unprecedented precursor activity indicating accelerated eruption timelines.",
       "red_team_strength": "moderate",
       "related_count": 0,
-      "suggested_size": 4.76
+      "suggested_size": 4.23
     },
     {
       "ticker": "KXPRIMEENGCONSUMPTION-30-OIL",
@@ -240,7 +240,7 @@
       "red_team_flaw": "Energy transitions can accelerate exponentially once cost parity is achieved, making the AI's linear infrastructure timeline assumptions obsolete.",
       "red_team_strength": "weak",
       "related_count": 0,
-      "suggested_size": 2.12
+      "suggested_size": 1.88
     },
     {
       "ticker": "KXUSTAKEOVER-30",
@@ -256,7 +256,7 @@
       "red_team_flaw": "",
       "red_team_strength": "",
       "related_count": 0,
-      "suggested_size": 2.38
+      "suggested_size": 2.11
     },
     {
       "ticker": "KXEARTHQUAKEJAPAN-30",
@@ -272,7 +272,7 @@
       "red_team_flaw": "The AI fundamentally misunderstands earthquake science - major earthquakes typically increase rather than decrease the probability of subsequent large earthquakes through stress transfer mechanisms.",
       "red_team_strength": "strong",
       "related_count": 1,
-      "suggested_size": 4.76
+      "suggested_size": 4.23
     },
     {
       "ticker": "KXTIMEDECADE20S-30-VZEL",
@@ -288,7 +288,7 @@
       "red_team_flaw": "",
       "red_team_strength": "",
       "related_count": 0,
-      "suggested_size": 1.02
+      "suggested_size": 1.0
     },
     {
       "ticker": "KXG7LEADEROUT-45JAN01-KSTA",
@@ -304,7 +304,7 @@
       "red_team_flaw": "",
       "red_team_strength": "",
       "related_count": 1,
-      "suggested_size": 2.99
+      "suggested_size": 2.65
     }
   ],
   "trade_history": [
