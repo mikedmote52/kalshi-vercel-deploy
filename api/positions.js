@@ -1,15 +1,27 @@
 /**
  * GET /api/positions — Fetch enriched position data with current market prices.
  * Returns each position with entry info, current price, P&L, and ROI.
+ * Protected: set KALSHI_DASHBOARD_KEY in Vercel env vars.
+ * Callers must send "Authorization: Bearer <key>" header.
  */
 const { getBalance, getPositions, getMarket } = require("./kalshi");
 
+const DASHBOARD_KEY = process.env.KALSHI_DASHBOARD_KEY;
+
 module.exports = async function handler(req, res) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  const origin = process.env.KALSHI_DASHBOARD_ORIGIN || "null";
+  res.setHeader("Access-Control-Allow-Origin", origin);
   res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
 
   if (req.method === "OPTIONS") return res.status(200).end();
+
+  if (DASHBOARD_KEY) {
+    const auth = (req.headers.authorization || "").trim();
+    if (auth !== `Bearer ${DASHBOARD_KEY}`) {
+      return res.status(401).json({ error: "Unauthorized — set Authorization: Bearer <KALSHI_DASHBOARD_KEY>" });
+    }
+  }
 
   try {
     const [positions, balance] = await Promise.all([
