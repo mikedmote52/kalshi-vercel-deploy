@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T21:51:40.313Z",
+  "generated_at": "2026-07-07T16:34:13.957Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 10,
@@ -11,8 +11,8 @@
       "contracts": 25,
       "price_cents": 2,
       "cost_dollars": 0.5,
-      "current_price_cents": 2,
-      "unrealized_pnl": -0.07499999999999996,
+      "current_price_cents": 7,
+      "unrealized_pnl": 1.125,
       "realized_pnl": 0
     },
     {
@@ -22,8 +22,8 @@
       "contracts": 14,
       "price_cents": 34,
       "cost_dollars": 4.76,
-      "current_price_cents": 32,
-      "unrealized_pnl": -0.27999999999999936,
+      "current_price_cents": 31,
+      "unrealized_pnl": -0.41999999999999993,
       "realized_pnl": 0
     },
     {
@@ -66,8 +66,8 @@
       "contracts": 22,
       "price_cents": 64,
       "cost_dollars": 14.18,
-      "current_price_cents": 61,
-      "unrealized_pnl": -0.7599999999999998,
+      "current_price_cents": 91,
+      "unrealized_pnl": 5.84,
       "realized_pnl": 0
     },
     {
@@ -77,8 +77,8 @@
       "contracts": 11,
       "price_cents": 44,
       "cost_dollars": 4.84,
-      "current_price_cents": 58,
-      "unrealized_pnl": 1.540000000000001,
+      "current_price_cents": 57,
+      "unrealized_pnl": 1.4300000000000006,
       "realized_pnl": 0
     },
     {
@@ -88,8 +88,8 @@
       "contracts": 55,
       "price_cents": 10,
       "cost_dollars": 5.5,
-      "current_price_cents": 12,
-      "unrealized_pnl": 1.0999999999999996,
+      "current_price_cents": 13,
+      "unrealized_pnl": 1.6500000000000004,
       "realized_pnl": 0
     },
     {
@@ -99,8 +99,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 57,
-      "unrealized_pnl": -8.881784197001252e-16,
+      "current_price_cents": 55,
+      "unrealized_pnl": -0.27999999999999936,
       "realized_pnl": 0
     },
     {
@@ -116,7 +116,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-07-06T21:51:40.313Z",
+    "timestamp": "2026-07-07T16:34:13.957Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -138,16 +138,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 671,
+  "elapsed_ms": 390,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 74,
-          "corrected_f": 75,
-          "period_name": "This Afternoon",
-          "period_start": "2026-07-06T17:00:00-04:00"
+          "raw_forecast_f": 73,
+          "corrected_f": 74,
+          "period_name": "Today",
+          "period_start": "2026-07-07T08:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -155,10 +155,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 78,
-          "corrected_f": 78.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-07-06T15:00:00-05:00"
+          "raw_forecast_f": 79,
+          "corrected_f": 79.5,
+          "period_name": "Today",
+          "period_start": "2026-07-07T11:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Miami",
         "forecast": {
-          "raw_forecast_f": 89,
-          "corrected_f": 92,
-          "period_name": "This Afternoon",
-          "period_start": "2026-07-06T17:00:00-04:00"
+          "raw_forecast_f": 91,
+          "corrected_f": 94,
+          "period_name": "Today",
+          "period_start": "2026-07-07T08:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -179,8 +179,8 @@
         "forecast": {
           "raw_forecast_f": 97,
           "corrected_f": 98.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-07-06T15:00:00-05:00"
+          "period_name": "Today",
+          "period_start": "2026-07-07T11:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -189,15 +189,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7537.43,
-        "vix": 15.57,
+        "spot": 7512.38,
+        "vix": 15.97,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 29697.873,
-        "vix": 26.81,
+        "spot": 29282.498,
+        "vix": 27.99,
         "markets_scanned": 0,
         "error": null
       }
