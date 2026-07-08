@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T16:02:59.810Z",
+  "generated_at": "2026-07-08T21:35:35.272Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 10,
@@ -110,13 +110,13 @@
       "contracts": 20,
       "price_cents": 24,
       "cost_dollars": 4.72,
-      "current_price_cents": 18,
-      "unrealized_pnl": -1.1199999999999988,
+      "current_price_cents": 20,
+      "unrealized_pnl": -0.7200000000000006,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-07-08T16:02:59.810Z",
+    "timestamp": "2026-07-08T21:35:35.272Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -138,7 +138,7 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 601,
+  "elapsed_ms": 674,
   "diagnostics": {
     "weather": [
       {
@@ -147,7 +147,7 @@
           "raw_forecast_f": 78,
           "corrected_f": 79,
           "period_name": "This Afternoon",
-          "period_start": "2026-07-08T12:00:00-04:00"
+          "period_start": "2026-07-08T17:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 89,
           "corrected_f": 89.5,
-          "period_name": "Today",
-          "period_start": "2026-07-08T11:00:00-05:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-07-08T16:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -169,7 +169,7 @@
           "raw_forecast_f": 92,
           "corrected_f": 95,
           "period_name": "This Afternoon",
-          "period_start": "2026-07-08T12:00:00-04:00"
+          "period_start": "2026-07-08T17:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -179,8 +179,8 @@
         "forecast": {
           "raw_forecast_f": 98,
           "corrected_f": 99.5,
-          "period_name": "Today",
-          "period_start": "2026-07-08T11:00:00-05:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-07-08T15:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -189,15 +189,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7435.84,
-        "vix": 18.32,
+        "spot": 7482.71,
+        "vix": 16.9,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 28898.68,
-        "vix": 29.64,
+        "spot": 29252.562,
+        "vix": 27.86,
         "markets_scanned": 0,
         "error": null
       }
