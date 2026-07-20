@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-19T15:00:31.616Z",
+  "generated_at": "2026-07-20T15:53:36.210Z",
   "balance": 0.83,
   "total_pnl": 156.24,
-  "positions": 10,
+  "positions": 9,
   "position_details": [
     {
       "ticker": "USCLIMATE-2025",
@@ -24,17 +24,6 @@
       "cost_dollars": 4.76,
       "current_price_cents": 37,
       "unrealized_pnl": 0.41999999999999993,
-      "realized_pnl": 0
-    },
-    {
-      "ticker": "KXG7LEADEROUT-45JAN01-KSTA",
-      "title": "Will Prime Minister of the United Kingdom be the first to leave office?",
-      "side": "no",
-      "contracts": 10,
-      "price_cents": 47,
-      "cost_dollars": 4.7,
-      "current_price_cents": 0,
-      "unrealized_pnl": -4.68,
       "realized_pnl": 0
     },
     {
@@ -66,8 +55,8 @@
       "contracts": 22,
       "price_cents": 64,
       "cost_dollars": 14.18,
-      "current_price_cents": 66,
-      "unrealized_pnl": 0.3399999999999981,
+      "current_price_cents": 57,
+      "unrealized_pnl": -1.6399999999999988,
       "realized_pnl": 0
     },
     {
@@ -110,13 +99,13 @@
       "contracts": 20,
       "price_cents": 24,
       "cost_dollars": 4.72,
-      "current_price_cents": 15,
-      "unrealized_pnl": -1.7199999999999993,
+      "current_price_cents": 19,
+      "unrealized_pnl": -0.9200000000000008,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-07-19T15:00:31.616Z",
+    "timestamp": "2026-07-20T15:53:36.210Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -138,7 +127,7 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 1131,
+  "elapsed_ms": 590,
   "diagnostics": {
     "weather": [
       {
@@ -147,7 +136,7 @@
           "raw_forecast_f": 80,
           "corrected_f": 81,
           "period_name": "Today",
-          "period_start": "2026-07-19T10:00:00-04:00"
+          "period_start": "2026-07-20T06:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -155,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 77,
-          "corrected_f": 77.5,
+          "raw_forecast_f": 86,
+          "corrected_f": 86.5,
           "period_name": "Today",
-          "period_start": "2026-07-19T10:00:00-05:00"
+          "period_start": "2026-07-20T10:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -169,7 +158,7 @@
           "raw_forecast_f": 91,
           "corrected_f": 94,
           "period_name": "Today",
-          "period_start": "2026-07-19T11:00:00-04:00"
+          "period_start": "2026-07-20T10:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -177,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 95,
-          "corrected_f": 96.5,
+          "raw_forecast_f": 97,
+          "corrected_f": 98.5,
           "period_name": "Today",
-          "period_start": "2026-07-19T09:00:00-05:00"
+          "period_start": "2026-07-20T09:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -189,15 +178,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7457.69,
-        "vix": 18.77,
+        "spot": 7485.58,
+        "vix": 17.94,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 28592.658,
-        "vix": 29.03,
+        "spot": 28854.893,
+        "vix": 28.12,
         "markets_scanned": 0,
         "error": null
       }
