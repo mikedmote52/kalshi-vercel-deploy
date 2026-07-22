@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T15:44:16.860Z",
+  "generated_at": "2026-07-22T21:38:15.786Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -88,8 +88,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 57,
-      "unrealized_pnl": -8.881784197001252e-16,
+      "current_price_cents": 63,
+      "unrealized_pnl": 0.8399999999999999,
       "realized_pnl": 0
     },
     {
@@ -105,7 +105,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-07-22T15:44:16.860Z",
+    "timestamp": "2026-07-22T21:38:15.786Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,7 +127,7 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 682,
+  "elapsed_ms": 531,
   "diagnostics": {
     "weather": [
       {
@@ -135,8 +135,8 @@
         "forecast": {
           "raw_forecast_f": 83,
           "corrected_f": 84,
-          "period_name": "Today",
-          "period_start": "2026-07-22T11:00:00-04:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-07-22T16:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -146,8 +146,8 @@
         "forecast": {
           "raw_forecast_f": 72,
           "corrected_f": 72.5,
-          "period_name": "Today",
-          "period_start": "2026-07-22T10:00:00-05:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-07-22T16:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 91,
           "corrected_f": 94,
-          "period_name": "Today",
-          "period_start": "2026-07-22T11:00:00-04:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-07-22T17:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -168,8 +168,8 @@
         "forecast": {
           "raw_forecast_f": 104,
           "corrected_f": 105.5,
-          "period_name": "Today",
-          "period_start": "2026-07-22T10:00:00-05:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-07-22T16:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,15 +178,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7515.06,
-        "vix": 16.8,
+        "spot": 7498.96,
+        "vix": 16.64,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 29124.121,
-        "vix": 26.76,
+        "spot": 28998.1,
+        "vix": 26.74,
         "markets_scanned": 0,
         "error": null
       }
