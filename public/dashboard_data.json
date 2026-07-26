@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T15:07:00.496Z",
+  "generated_at": "2026-07-26T15:08:41.737Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -11,8 +11,8 @@
       "contracts": 25,
       "price_cents": 2,
       "cost_dollars": 0.5,
-      "current_price_cents": 7,
-      "unrealized_pnl": 1.1500000000000001,
+      "current_price_cents": 2,
+      "unrealized_pnl": 0.07499999999999996,
       "realized_pnl": 0
     },
     {
@@ -22,8 +22,8 @@
       "contracts": 14,
       "price_cents": 34,
       "cost_dollars": 4.76,
-      "current_price_cents": 37,
-      "unrealized_pnl": 0.41999999999999993,
+      "current_price_cents": 32,
+      "unrealized_pnl": -0.27999999999999936,
       "realized_pnl": 0
     },
     {
@@ -33,8 +33,8 @@
       "contracts": 11,
       "price_cents": 47,
       "cost_dollars": 5.17,
-      "current_price_cents": 60,
-      "unrealized_pnl": 1.4299999999999997,
+      "current_price_cents": 61,
+      "unrealized_pnl": 1.54,
       "realized_pnl": 0
     },
     {
@@ -55,8 +55,8 @@
       "contracts": 22,
       "price_cents": 64,
       "cost_dollars": 14.18,
-      "current_price_cents": 93,
-      "unrealized_pnl": 6.279999999999998,
+      "current_price_cents": 67,
+      "unrealized_pnl": 0.5599999999999987,
       "realized_pnl": 0
     },
     {
@@ -66,8 +66,8 @@
       "contracts": 11,
       "price_cents": 44,
       "cost_dollars": 4.84,
-      "current_price_cents": 57,
-      "unrealized_pnl": 1.4300000000000006,
+      "current_price_cents": 58,
+      "unrealized_pnl": 1.540000000000001,
       "realized_pnl": 0
     },
     {
@@ -77,8 +77,8 @@
       "contracts": 55,
       "price_cents": 10,
       "cost_dollars": 5.5,
-      "current_price_cents": 12,
-      "unrealized_pnl": 1.0999999999999996,
+      "current_price_cents": 13,
+      "unrealized_pnl": 1.6500000000000004,
       "realized_pnl": 0
     },
     {
@@ -88,8 +88,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 63,
-      "unrealized_pnl": 0.8399999999999999,
+      "current_price_cents": 62,
+      "unrealized_pnl": 0.6999999999999993,
       "realized_pnl": 0
     },
     {
@@ -99,13 +99,13 @@
       "contracts": 20,
       "price_cents": 24,
       "cost_dollars": 4.72,
-      "current_price_cents": 17,
-      "unrealized_pnl": -1.319999999999999,
+      "current_price_cents": 19,
+      "unrealized_pnl": -0.9200000000000008,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-07-25T15:07:00.496Z",
+    "timestamp": "2026-07-26T15:08:41.737Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 1627,
+  "elapsed_ms": 770,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 78,
-          "corrected_f": 79,
+          "raw_forecast_f": 80,
+          "corrected_f": 81,
           "period_name": "Today",
-          "period_start": "2026-07-25T11:00:00-04:00"
+          "period_start": "2026-07-26T10:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 79,
-          "corrected_f": 79.5,
+          "raw_forecast_f": 90,
+          "corrected_f": 90.5,
           "period_name": "Today",
-          "period_start": "2026-07-25T10:00:00-05:00"
+          "period_start": "2026-07-26T10:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -155,10 +155,10 @@
       {
         "city": "Miami",
         "forecast": {
-          "raw_forecast_f": 91,
-          "corrected_f": 94,
+          "raw_forecast_f": 90,
+          "corrected_f": 93,
           "period_name": "Today",
-          "period_start": "2026-07-25T11:00:00-04:00"
+          "period_start": "2026-07-26T11:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 98,
-          "corrected_f": 99.5,
+          "raw_forecast_f": 99,
+          "corrected_f": 100.5,
           "period_name": "Today",
-          "period_start": "2026-07-25T08:00:00-05:00"
+          "period_start": "2026-07-26T10:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -191,6 +191,13 @@
         "error": null
       }
     ],
-    "econ_calendar": []
+    "econ_calendar": [
+      {
+        "event": "FOMC",
+        "date": "2026-07-29",
+        "days_until": 2.93,
+        "markets_found": 98
+      }
+    ]
   }
 }
