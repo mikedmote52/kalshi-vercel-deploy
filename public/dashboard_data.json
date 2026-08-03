@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T16:29:10.130Z",
+  "generated_at": "2026-08-03T21:35:08.564Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -77,8 +77,8 @@
       "contracts": 55,
       "price_cents": 10,
       "cost_dollars": 5.5,
-      "current_price_cents": 10,
-      "unrealized_pnl": 0,
+      "current_price_cents": 11,
+      "unrealized_pnl": 0.5499999999999998,
       "realized_pnl": 0
     },
     {
@@ -88,8 +88,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 62,
-      "unrealized_pnl": 0.6999999999999993,
+      "current_price_cents": 61,
+      "unrealized_pnl": 0.5599999999999987,
       "realized_pnl": 0
     },
     {
@@ -99,13 +99,13 @@
       "contracts": 20,
       "price_cents": 24,
       "cost_dollars": 4.72,
-      "current_price_cents": 16,
-      "unrealized_pnl": -1.5199999999999991,
+      "current_price_cents": 19,
+      "unrealized_pnl": -0.9200000000000008,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-08-03T16:29:10.130Z",
+    "timestamp": "2026-08-03T21:35:08.564Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,7 +127,7 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 797,
+  "elapsed_ms": 612,
   "diagnostics": {
     "weather": [
       {
@@ -135,8 +135,8 @@
         "forecast": {
           "raw_forecast_f": 81,
           "corrected_f": 82,
-          "period_name": "Today",
-          "period_start": "2026-08-03T10:00:00-04:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-08-03T17:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -146,8 +146,8 @@
         "forecast": {
           "raw_forecast_f": 78,
           "corrected_f": 78.5,
-          "period_name": "Today",
-          "period_start": "2026-08-03T11:00:00-05:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-08-03T16:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -158,7 +158,7 @@
           "raw_forecast_f": 91,
           "corrected_f": 94,
           "period_name": "This Afternoon",
-          "period_start": "2026-08-03T12:00:00-04:00"
+          "period_start": "2026-08-03T17:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -168,8 +168,8 @@
         "forecast": {
           "raw_forecast_f": 103,
           "corrected_f": 104.5,
-          "period_name": "Today",
-          "period_start": "2026-08-03T08:00:00-05:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-08-03T15:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,15 +178,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7588.83,
-        "vix": 15.6,
+        "spot": 7600.5,
+        "vix": 15.86,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 28715.014,
-        "vix": 25.17,
+        "spot": 28776.803,
+        "vix": 24.77,
         "markets_scanned": 0,
         "error": null
       }
