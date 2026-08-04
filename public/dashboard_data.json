@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T21:35:08.564Z",
+  "generated_at": "2026-08-04T16:13:35.010Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -22,8 +22,8 @@
       "contracts": 14,
       "price_cents": 34,
       "cost_dollars": 4.76,
-      "current_price_cents": 31,
-      "unrealized_pnl": -0.41999999999999993,
+      "current_price_cents": 35,
+      "unrealized_pnl": 0.13999999999999968,
       "realized_pnl": 0
     },
     {
@@ -77,8 +77,8 @@
       "contracts": 55,
       "price_cents": 10,
       "cost_dollars": 5.5,
-      "current_price_cents": 11,
-      "unrealized_pnl": 0.5499999999999998,
+      "current_price_cents": 13,
+      "unrealized_pnl": 1.6500000000000004,
       "realized_pnl": 0
     },
     {
@@ -88,8 +88,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 61,
-      "unrealized_pnl": 0.5599999999999987,
+      "current_price_cents": 56,
+      "unrealized_pnl": -0.13999999999999968,
       "realized_pnl": 0
     },
     {
@@ -99,15 +99,15 @@
       "contracts": 20,
       "price_cents": 24,
       "cost_dollars": 4.72,
-      "current_price_cents": 19,
-      "unrealized_pnl": -0.9200000000000008,
+      "current_price_cents": 17,
+      "unrealized_pnl": -1.319999999999999,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-08-03T21:35:08.564Z",
-    "markets_pulled": 48,
-    "markets_analyzed": 48,
+    "timestamp": "2026-08-04T16:13:35.010Z",
+    "markets_pulled": 36,
+    "markets_analyzed": 36,
     "opportunities_found": 0,
     "trades_placed": 0
   },
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 612,
+  "elapsed_ms": 575,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 81,
-          "corrected_f": 82,
-          "period_name": "This Afternoon",
-          "period_start": "2026-08-03T17:00:00-04:00"
+          "raw_forecast_f": 82,
+          "corrected_f": 83,
+          "period_name": "Today",
+          "period_start": "2026-08-04T07:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,32 +144,27 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 78,
-          "corrected_f": 78.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-08-03T16:00:00-05:00"
+          "raw_forecast_f": 84,
+          "corrected_f": 84.5,
+          "period_name": "Today",
+          "period_start": "2026-08-04T11:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
       },
       {
         "city": "Miami",
-        "forecast": {
-          "raw_forecast_f": 91,
-          "corrected_f": 94,
-          "period_name": "This Afternoon",
-          "period_start": "2026-08-03T17:00:00-04:00"
-        },
-        "markets_scanned": 12,
-        "error": null
+        "forecast": null,
+        "markets_scanned": 0,
+        "error": "https://api.weather.gov/gridpoints/MFL/109,50/forecast 500: {\n    \"correlationId\": \"2a5adefb\",\n    \"title\": \"Unexpected Problem\",\n    \"type\": \"https://api.weather.gov/problems/UnexpectedProblem\",\n    \"status\": 500,\n    \"detail\": \"An unexpected problem has occu"
       },
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 103,
-          "corrected_f": 104.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-08-03T15:00:00-05:00"
+          "raw_forecast_f": 101,
+          "corrected_f": 102.5,
+          "period_name": "Today",
+          "period_start": "2026-08-04T11:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,19 +173,26 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7600.5,
-        "vix": 15.86,
+        "spot": 7707.47,
+        "vix": 16.38,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 28776.803,
-        "vix": 24.77,
+        "spot": 29552.387,
+        "vix": 25.86,
         "markets_scanned": 0,
         "error": null
       }
     ],
-    "econ_calendar": []
+    "econ_calendar": [
+      {
+        "event": "NFP July 2026",
+        "date": "2026-08-07",
+        "days_until": 2.89,
+        "markets_found": 0
+      }
+    ]
   }
 }
