@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T16:13:35.010Z",
+  "generated_at": "2026-08-04T21:43:56.414Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -88,8 +88,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 56,
-      "unrealized_pnl": -0.13999999999999968,
+      "current_price_cents": 57,
+      "unrealized_pnl": -8.881784197001252e-16,
       "realized_pnl": 0
     },
     {
@@ -105,9 +105,9 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-08-04T16:13:35.010Z",
-    "markets_pulled": 36,
-    "markets_analyzed": 36,
+    "timestamp": "2026-08-04T21:43:56.414Z",
+    "markets_pulled": 48,
+    "markets_analyzed": 48,
     "opportunities_found": 0,
     "trades_placed": 0
   },
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 575,
+  "elapsed_ms": 755,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 82,
-          "corrected_f": 83,
-          "period_name": "Today",
-          "period_start": "2026-08-04T07:00:00-04:00"
+          "raw_forecast_f": 81,
+          "corrected_f": 82,
+          "period_name": "This Afternoon",
+          "period_start": "2026-08-04T17:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -146,25 +146,30 @@
         "forecast": {
           "raw_forecast_f": 84,
           "corrected_f": 84.5,
-          "period_name": "Today",
-          "period_start": "2026-08-04T11:00:00-05:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-08-04T16:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
       },
       {
         "city": "Miami",
-        "forecast": null,
-        "markets_scanned": 0,
-        "error": "https://api.weather.gov/gridpoints/MFL/109,50/forecast 500: {\n    \"correlationId\": \"2a5adefb\",\n    \"title\": \"Unexpected Problem\",\n    \"type\": \"https://api.weather.gov/problems/UnexpectedProblem\",\n    \"status\": 500,\n    \"detail\": \"An unexpected problem has occu"
+        "forecast": {
+          "raw_forecast_f": 90,
+          "corrected_f": 93,
+          "period_name": "This Afternoon",
+          "period_start": "2026-08-04T16:00:00-04:00"
+        },
+        "markets_scanned": 12,
+        "error": null
       },
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 101,
-          "corrected_f": 102.5,
-          "period_name": "Today",
-          "period_start": "2026-08-04T11:00:00-05:00"
+          "raw_forecast_f": 100,
+          "corrected_f": 101.5,
+          "period_name": "This Afternoon",
+          "period_start": "2026-08-04T15:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -173,15 +178,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7707.47,
-        "vix": 16.38,
+        "spot": 7736.52,
+        "vix": 16.5,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 29552.387,
-        "vix": 25.86,
+        "spot": 29733.16,
+        "vix": 25.48,
         "markets_scanned": 0,
         "error": null
       }
@@ -190,7 +195,7 @@
       {
         "event": "NFP July 2026",
         "date": "2026-08-07",
-        "days_until": 2.89,
+        "days_until": 2.66,
         "markets_found": 0
       }
     ]
