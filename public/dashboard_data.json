@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T21:05:08.336Z",
+  "generated_at": "2026-08-08T14:35:16.339Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -33,8 +33,8 @@
       "contracts": 11,
       "price_cents": 47,
       "cost_dollars": 5.17,
-      "current_price_cents": 57,
-      "unrealized_pnl": 1.1000000000000005,
+      "current_price_cents": 60,
+      "unrealized_pnl": 1.4299999999999997,
       "realized_pnl": 0
     },
     {
@@ -88,8 +88,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 65,
-      "unrealized_pnl": 1.1199999999999992,
+      "current_price_cents": 62,
+      "unrealized_pnl": 0.6999999999999993,
       "realized_pnl": 0
     },
     {
@@ -105,7 +105,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-08-07T21:05:08.336Z",
+    "timestamp": "2026-08-08T14:35:16.339Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 4358,
+  "elapsed_ms": 464,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 88,
-          "corrected_f": 89,
-          "period_name": "This Afternoon",
-          "period_start": "2026-08-07T16:00:00-04:00"
+          "raw_forecast_f": 89,
+          "corrected_f": 90,
+          "period_name": "Today",
+          "period_start": "2026-08-08T10:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 84,
-          "corrected_f": 84.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-08-07T16:00:00-05:00"
+          "raw_forecast_f": 80,
+          "corrected_f": 80.5,
+          "period_name": "Today",
+          "period_start": "2026-08-08T09:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -155,10 +155,10 @@
       {
         "city": "Miami",
         "forecast": {
-          "raw_forecast_f": 89,
-          "corrected_f": 92,
-          "period_name": "This Afternoon",
-          "period_start": "2026-08-07T17:00:00-04:00"
+          "raw_forecast_f": 90,
+          "corrected_f": 93,
+          "period_name": "Today",
+          "period_start": "2026-08-08T10:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -168,8 +168,8 @@
         "forecast": {
           "raw_forecast_f": 99,
           "corrected_f": 100.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-08-07T16:00:00-05:00"
+          "period_name": "Today",
+          "period_start": "2026-08-08T07:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -191,13 +191,6 @@
         "error": null
       }
     ],
-    "econ_calendar": [
-      {
-        "event": "NFP July 2026",
-        "date": "2026-08-07",
-        "days_until": -0.32,
-        "markets_found": 0
-      }
-    ]
+    "econ_calendar": []
   }
 }
