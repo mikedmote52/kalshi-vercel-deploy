@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T20:51:05.353Z",
+  "generated_at": "2026-08-15T14:26:55.738Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -55,8 +55,8 @@
       "contracts": 22,
       "price_cents": 64,
       "cost_dollars": 14.18,
-      "current_price_cents": 72,
-      "unrealized_pnl": 1.6600000000000001,
+      "current_price_cents": 55,
+      "unrealized_pnl": -2.0799999999999983,
       "realized_pnl": 0
     },
     {
@@ -99,13 +99,13 @@
       "contracts": 20,
       "price_cents": 24,
       "cost_dollars": 4.72,
-      "current_price_cents": 10,
-      "unrealized_pnl": -2.72,
+      "current_price_cents": 7,
+      "unrealized_pnl": -3.3200000000000007,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-08-14T20:51:05.353Z",
+    "timestamp": "2026-08-15T14:26:55.738Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 628,
+  "elapsed_ms": 519,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 84,
-          "corrected_f": 85,
-          "period_name": "This Afternoon",
-          "period_start": "2026-08-14T16:00:00-04:00"
+          "raw_forecast_f": 81,
+          "corrected_f": 82,
+          "period_name": "Today",
+          "period_start": "2026-08-15T10:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 78,
-          "corrected_f": 78.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-08-14T15:00:00-05:00"
+          "raw_forecast_f": 80,
+          "corrected_f": 80.5,
+          "period_name": "Today",
+          "period_start": "2026-08-15T09:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 92,
           "corrected_f": 95,
-          "period_name": "This Afternoon",
-          "period_start": "2026-08-14T16:00:00-04:00"
+          "period_name": "Today",
+          "period_start": "2026-08-15T10:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 100,
-          "corrected_f": 101.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-08-14T15:00:00-05:00"
+          "raw_forecast_f": 101,
+          "corrected_f": 102.5,
+          "period_name": "Today",
+          "period_start": "2026-08-15T08:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
