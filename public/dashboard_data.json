@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T23:28:52.985Z",
+  "generated_at": "2026-08-29T02:51:13.994Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -99,13 +99,13 @@
       "contracts": 20,
       "price_cents": 24,
       "cost_dollars": 4.72,
-      "current_price_cents": 6,
-      "unrealized_pnl": -3.5199999999999987,
+      "current_price_cents": 9,
+      "unrealized_pnl": -2.9200000000000004,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-08-28T23:28:52.985Z",
+    "timestamp": "2026-08-29T02:51:13.994Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,7 +127,7 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 836,
+  "elapsed_ms": 736,
   "diagnostics": {
     "weather": [
       {
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 79,
-          "corrected_f": 79.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-08-28T17:00:00-05:00"
+          "raw_forecast_f": 80,
+          "corrected_f": 80.5,
+          "period_name": "Saturday",
+          "period_start": "2026-08-29T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
