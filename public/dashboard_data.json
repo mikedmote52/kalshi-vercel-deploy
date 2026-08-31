@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T17:59:10.467Z",
+  "generated_at": "2026-08-31T19:53:07.191Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -11,8 +11,8 @@
       "contracts": 25,
       "price_cents": 2,
       "cost_dollars": 0.5,
-      "current_price_cents": 6,
-      "unrealized_pnl": 1.025,
+      "current_price_cents": 13,
+      "unrealized_pnl": 2.75,
       "realized_pnl": 0
     },
     {
@@ -22,8 +22,8 @@
       "contracts": 14,
       "price_cents": 34,
       "cost_dollars": 4.76,
-      "current_price_cents": 31,
-      "unrealized_pnl": -0.41999999999999993,
+      "current_price_cents": 37,
+      "unrealized_pnl": 0.41999999999999993,
       "realized_pnl": 0
     },
     {
@@ -55,8 +55,8 @@
       "contracts": 22,
       "price_cents": 64,
       "cost_dollars": 14.18,
-      "current_price_cents": 73,
-      "unrealized_pnl": 1.879999999999999,
+      "current_price_cents": 67,
+      "unrealized_pnl": 0.5599999999999987,
       "realized_pnl": 0
     },
     {
@@ -66,8 +66,8 @@
       "contracts": 11,
       "price_cents": 44,
       "cost_dollars": 4.84,
-      "current_price_cents": 51,
-      "unrealized_pnl": 0.7700000000000005,
+      "current_price_cents": 52,
+      "unrealized_pnl": 0.8800000000000008,
       "realized_pnl": 0
     },
     {
@@ -88,8 +88,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 63,
-      "unrealized_pnl": 0.8399999999999999,
+      "current_price_cents": 61,
+      "unrealized_pnl": 0.5599999999999987,
       "realized_pnl": 0
     },
     {
@@ -99,13 +99,13 @@
       "contracts": 20,
       "price_cents": 24,
       "cost_dollars": 4.72,
-      "current_price_cents": 7,
-      "unrealized_pnl": -3.3200000000000007,
+      "current_price_cents": 10,
+      "unrealized_pnl": -2.72,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-08-30T17:59:10.467Z",
+    "timestamp": "2026-08-31T19:53:07.191Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 573,
+  "elapsed_ms": 559,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 82,
-          "corrected_f": 83,
-          "period_name": "Today",
-          "period_start": "2026-08-30T09:00:00-04:00"
+          "raw_forecast_f": 77,
+          "corrected_f": 78,
+          "period_name": "This Afternoon",
+          "period_start": "2026-08-31T15:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 82,
-          "corrected_f": 82.5,
+          "raw_forecast_f": 86,
+          "corrected_f": 86.5,
           "period_name": "This Afternoon",
-          "period_start": "2026-08-30T12:00:00-05:00"
+          "period_start": "2026-08-31T14:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -158,7 +158,7 @@
           "raw_forecast_f": 90,
           "corrected_f": 93,
           "period_name": "This Afternoon",
-          "period_start": "2026-08-30T13:00:00-04:00"
+          "period_start": "2026-08-31T15:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 100,
-          "corrected_f": 101.5,
+          "raw_forecast_f": 101,
+          "corrected_f": 102.5,
           "period_name": "This Afternoon",
-          "period_start": "2026-08-30T12:00:00-05:00"
+          "period_start": "2026-08-31T14:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,15 +178,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7711.76,
-        "vix": 14.43,
+        "spot": 7691.9,
+        "vix": 14.99,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 29433.428,
-        "vix": 19.92,
+        "spot": 29474.217,
+        "vix": 20.41,
         "markets_scanned": 0,
         "error": null
       }
