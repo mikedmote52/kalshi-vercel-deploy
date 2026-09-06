@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T16:40:08.458Z",
+  "generated_at": "2026-09-06T16:47:03.773Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -66,8 +66,8 @@
       "contracts": 11,
       "price_cents": 44,
       "cost_dollars": 4.84,
-      "current_price_cents": 59,
-      "unrealized_pnl": 1.6500000000000012,
+      "current_price_cents": 58,
+      "unrealized_pnl": 1.540000000000001,
       "realized_pnl": 0
     },
     {
@@ -105,7 +105,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-09-05T16:40:08.458Z",
+    "timestamp": "2026-09-06T16:47:03.773Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 563,
+  "elapsed_ms": 860,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 79,
-          "corrected_f": 80,
-          "period_name": "Today",
-          "period_start": "2026-09-05T06:00:00-04:00"
+          "raw_forecast_f": 73,
+          "corrected_f": 74,
+          "period_name": "This Afternoon",
+          "period_start": "2026-09-06T12:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 77,
-          "corrected_f": 77.5,
+          "raw_forecast_f": 76,
+          "corrected_f": 76.5,
           "period_name": "Today",
-          "period_start": "2026-09-05T11:00:00-05:00"
+          "period_start": "2026-09-06T11:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -158,7 +158,7 @@
           "raw_forecast_f": 90,
           "corrected_f": 93,
           "period_name": "This Afternoon",
-          "period_start": "2026-09-05T12:00:00-04:00"
+          "period_start": "2026-09-06T12:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -169,7 +169,7 @@
           "raw_forecast_f": 96,
           "corrected_f": 97.5,
           "period_name": "Today",
-          "period_start": "2026-09-05T11:00:00-05:00"
+          "period_start": "2026-09-06T11:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
