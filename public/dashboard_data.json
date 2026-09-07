@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T16:47:03.773Z",
+  "generated_at": "2026-09-07T18:39:01.311Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -66,8 +66,8 @@
       "contracts": 11,
       "price_cents": 44,
       "cost_dollars": 4.84,
-      "current_price_cents": 58,
-      "unrealized_pnl": 1.540000000000001,
+      "current_price_cents": 53,
+      "unrealized_pnl": 0.9900000000000002,
       "realized_pnl": 0
     },
     {
@@ -77,8 +77,8 @@
       "contracts": 55,
       "price_cents": 10,
       "cost_dollars": 5.5,
-      "current_price_cents": 10,
-      "unrealized_pnl": 0,
+      "current_price_cents": 12,
+      "unrealized_pnl": 1.0999999999999996,
       "realized_pnl": 0
     },
     {
@@ -105,7 +105,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-09-06T16:47:03.773Z",
+    "timestamp": "2026-09-07T18:39:01.311Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 860,
+  "elapsed_ms": 836,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 73,
-          "corrected_f": 74,
-          "period_name": "This Afternoon",
-          "period_start": "2026-09-06T12:00:00-04:00"
+          "raw_forecast_f": 80,
+          "corrected_f": 81,
+          "period_name": "Labor Day",
+          "period_start": "2026-09-07T06:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -146,8 +146,8 @@
         "forecast": {
           "raw_forecast_f": 76,
           "corrected_f": 76.5,
-          "period_name": "Today",
-          "period_start": "2026-09-06T11:00:00-05:00"
+          "period_name": "Labor Day",
+          "period_start": "2026-09-07T13:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 90,
           "corrected_f": 93,
-          "period_name": "This Afternoon",
-          "period_start": "2026-09-06T12:00:00-04:00"
+          "period_name": "Labor Day",
+          "period_start": "2026-09-07T14:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 96,
-          "corrected_f": 97.5,
-          "period_name": "Today",
-          "period_start": "2026-09-06T11:00:00-05:00"
+          "raw_forecast_f": 99,
+          "corrected_f": 100.5,
+          "period_name": "Labor Day",
+          "period_start": "2026-09-07T13:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -179,7 +179,7 @@
       {
         "index": "S&P 500",
         "spot": 7718.6,
-        "vix": 14.53,
+        "vix": 15.3,
         "markets_scanned": 0,
         "error": null
       },
@@ -191,6 +191,13 @@
         "error": null
       }
     ],
-    "econ_calendar": []
+    "econ_calendar": [
+      {
+        "event": "CPI August 2026",
+        "date": "2026-09-10",
+        "days_until": 2.79,
+        "markets_found": 40
+      }
+    ]
   }
 }
