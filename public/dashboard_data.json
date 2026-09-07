@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T18:39:01.311Z",
+  "generated_at": "2026-09-07T22:53:53.912Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -66,8 +66,8 @@
       "contracts": 11,
       "price_cents": 44,
       "cost_dollars": 4.84,
-      "current_price_cents": 53,
-      "unrealized_pnl": 0.9900000000000002,
+      "current_price_cents": 51,
+      "unrealized_pnl": 0.7700000000000005,
       "realized_pnl": 0
     },
     {
@@ -105,7 +105,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-09-07T18:39:01.311Z",
+    "timestamp": "2026-09-07T22:53:53.912Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 836,
+  "elapsed_ms": 626,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 80,
-          "corrected_f": 81,
-          "period_name": "Labor Day",
-          "period_start": "2026-09-07T06:00:00-04:00"
+          "raw_forecast_f": 82,
+          "corrected_f": 83,
+          "period_name": "Tuesday",
+          "period_start": "2026-09-08T06:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -147,7 +147,7 @@
           "raw_forecast_f": 76,
           "corrected_f": 76.5,
           "period_name": "Labor Day",
-          "period_start": "2026-09-07T13:00:00-05:00"
+          "period_start": "2026-09-07T17:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 90,
           "corrected_f": 93,
-          "period_name": "Labor Day",
-          "period_start": "2026-09-07T14:00:00-04:00"
+          "period_name": "Tuesday",
+          "period_start": "2026-09-08T06:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 99,
-          "corrected_f": 100.5,
+          "raw_forecast_f": 101,
+          "corrected_f": 102.5,
           "period_name": "Labor Day",
-          "period_start": "2026-09-07T13:00:00-05:00"
+          "period_start": "2026-09-07T17:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -195,7 +195,7 @@
       {
         "event": "CPI August 2026",
         "date": "2026-09-10",
-        "days_until": 2.79,
+        "days_until": 2.61,
         "markets_found": 40
       }
     ]
