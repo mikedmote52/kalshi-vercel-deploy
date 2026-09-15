@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T18:02:47.533Z",
+  "generated_at": "2026-09-15T22:59:00.041Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -22,8 +22,8 @@
       "contracts": 14,
       "price_cents": 34,
       "cost_dollars": 4.76,
-      "current_price_cents": 35,
-      "unrealized_pnl": 0.13999999999999968,
+      "current_price_cents": 31,
+      "unrealized_pnl": -0.41999999999999993,
       "realized_pnl": 0
     },
     {
@@ -66,8 +66,8 @@
       "contracts": 11,
       "price_cents": 44,
       "cost_dollars": 4.84,
-      "current_price_cents": 48,
-      "unrealized_pnl": 0.4399999999999995,
+      "current_price_cents": 52,
+      "unrealized_pnl": 0.8800000000000008,
       "realized_pnl": 0
     },
     {
@@ -77,8 +77,8 @@
       "contracts": 55,
       "price_cents": 10,
       "cost_dollars": 5.5,
-      "current_price_cents": 10,
-      "unrealized_pnl": 0,
+      "current_price_cents": 12,
+      "unrealized_pnl": 1.0999999999999996,
       "realized_pnl": 0
     },
     {
@@ -88,8 +88,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 62,
-      "unrealized_pnl": 0.6999999999999993,
+      "current_price_cents": 61,
+      "unrealized_pnl": 0.5599999999999987,
       "realized_pnl": 0
     },
     {
@@ -105,7 +105,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-09-15T18:02:47.533Z",
+    "timestamp": "2026-09-15T22:59:00.041Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 687,
+  "elapsed_ms": 387,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 70,
-          "corrected_f": 71,
-          "period_name": "This Afternoon",
-          "period_start": "2026-09-15T14:00:00-04:00"
+          "raw_forecast_f": 78,
+          "corrected_f": 79,
+          "period_name": "Wednesday",
+          "period_start": "2026-09-16T06:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 79,
-          "corrected_f": 79.5,
+          "raw_forecast_f": 83,
+          "corrected_f": 83.5,
           "period_name": "This Afternoon",
-          "period_start": "2026-09-15T12:00:00-05:00"
+          "period_start": "2026-09-15T17:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 90,
           "corrected_f": 93,
-          "period_name": "This Afternoon",
-          "period_start": "2026-09-15T14:00:00-04:00"
+          "period_name": "Wednesday",
+          "period_start": "2026-09-16T06:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -169,7 +169,7 @@
           "raw_forecast_f": 102,
           "corrected_f": 103.5,
           "period_name": "This Afternoon",
-          "period_start": "2026-09-15T12:00:00-05:00"
+          "period_start": "2026-09-15T17:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,15 +178,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7586.26,
-        "vix": 17.6,
+        "spot": 7585.73,
+        "vix": 17.2,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 28961.115,
-        "vix": 22.65,
+        "spot": 28937.838,
+        "vix": 22.26,
         "markets_scanned": 0,
         "error": null
       }
@@ -195,7 +195,7 @@
       {
         "event": "FOMC",
         "date": "2026-09-16",
-        "days_until": 0.81,
+        "days_until": 0.6,
         "markets_found": 87
       }
     ]
