@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T22:59:00.041Z",
+  "generated_at": "2026-09-16T18:01:44.451Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -44,8 +44,8 @@
       "contracts": 3,
       "price_cents": 53,
       "cost_dollars": 1.59,
-      "current_price_cents": 94,
-      "unrealized_pnl": 1.2299999999999998,
+      "current_price_cents": 99,
+      "unrealized_pnl": 1.3799999999999997,
       "realized_pnl": 0
     },
     {
@@ -77,8 +77,8 @@
       "contracts": 55,
       "price_cents": 10,
       "cost_dollars": 5.5,
-      "current_price_cents": 12,
-      "unrealized_pnl": 1.0999999999999996,
+      "current_price_cents": 10,
+      "unrealized_pnl": 0,
       "realized_pnl": 0
     },
     {
@@ -88,8 +88,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 61,
-      "unrealized_pnl": 0.5599999999999987,
+      "current_price_cents": 62,
+      "unrealized_pnl": 0.6999999999999993,
       "realized_pnl": 0
     },
     {
@@ -99,13 +99,13 @@
       "contracts": 20,
       "price_cents": 24,
       "cost_dollars": 4.72,
-      "current_price_cents": 7,
-      "unrealized_pnl": -3.3200000000000007,
+      "current_price_cents": 9,
+      "unrealized_pnl": -2.9200000000000004,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-09-15T22:59:00.041Z",
+    "timestamp": "2026-09-16T18:01:44.451Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 387,
+  "elapsed_ms": 568,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 78,
-          "corrected_f": 79,
-          "period_name": "Wednesday",
-          "period_start": "2026-09-16T06:00:00-04:00"
+          "raw_forecast_f": 77,
+          "corrected_f": 78,
+          "period_name": "This Afternoon",
+          "period_start": "2026-09-16T12:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 83,
-          "corrected_f": 83.5,
+          "raw_forecast_f": 71,
+          "corrected_f": 71.5,
           "period_name": "This Afternoon",
-          "period_start": "2026-09-15T17:00:00-05:00"
+          "period_start": "2026-09-16T13:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -155,10 +155,10 @@
       {
         "city": "Miami",
         "forecast": {
-          "raw_forecast_f": 90,
-          "corrected_f": 93,
-          "period_name": "Wednesday",
-          "period_start": "2026-09-16T06:00:00-04:00"
+          "raw_forecast_f": 89,
+          "corrected_f": 92,
+          "period_name": "This Afternoon",
+          "period_start": "2026-09-16T14:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 102,
-          "corrected_f": 103.5,
+          "raw_forecast_f": 101,
+          "corrected_f": 102.5,
           "period_name": "This Afternoon",
-          "period_start": "2026-09-15T17:00:00-05:00"
+          "period_start": "2026-09-16T12:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,15 +178,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7585.73,
-        "vix": 17.2,
+        "spot": 7602.21,
+        "vix": 16.86,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 28937.838,
-        "vix": 22.26,
+        "spot": 29121.28,
+        "vix": 21.6,
         "markets_scanned": 0,
         "error": null
       }
@@ -195,8 +195,8 @@
       {
         "event": "FOMC",
         "date": "2026-09-16",
-        "days_until": 0.6,
-        "markets_found": 87
+        "days_until": -0.19,
+        "markets_found": 76
       }
     ]
   }
