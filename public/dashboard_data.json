@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T23:00:12.840Z",
+  "generated_at": "2026-09-24T18:20:10.906Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -11,8 +11,8 @@
       "contracts": 25,
       "price_cents": 2,
       "cost_dollars": 0.5,
-      "current_price_cents": 6,
-      "unrealized_pnl": 1,
+      "current_price_cents": 12,
+      "unrealized_pnl": 2.375,
       "realized_pnl": 0
     },
     {
@@ -33,8 +33,8 @@
       "contracts": 11,
       "price_cents": 47,
       "cost_dollars": 5.17,
-      "current_price_cents": 63,
-      "unrealized_pnl": 1.7599999999999998,
+      "current_price_cents": 62,
+      "unrealized_pnl": 1.6500000000000004,
       "realized_pnl": 0
     },
     {
@@ -77,8 +77,8 @@
       "contracts": 55,
       "price_cents": 10,
       "cost_dollars": 5.5,
-      "current_price_cents": 9,
-      "unrealized_pnl": -0.5499999999999998,
+      "current_price_cents": 11,
+      "unrealized_pnl": 0.5499999999999998,
       "realized_pnl": 0
     },
     {
@@ -99,15 +99,15 @@
       "contracts": 20,
       "price_cents": 24,
       "cost_dollars": 4.72,
-      "current_price_cents": 7,
-      "unrealized_pnl": -3.3200000000000007,
+      "current_price_cents": 6,
+      "unrealized_pnl": -3.5199999999999987,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-09-23T23:00:12.840Z",
-    "markets_pulled": 12,
-    "markets_analyzed": 12,
+    "timestamp": "2026-09-24T18:20:10.906Z",
+    "markets_pulled": 48,
+    "markets_analyzed": 48,
     "opportunities_found": 0,
     "trades_placed": 0
   },
@@ -127,26 +127,41 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 488,
+  "elapsed_ms": 1175,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
-        "forecast": null,
-        "markets_scanned": 0,
-        "error": "https://api.weather.gov/gridpoints/OKX/33,37/forecast 503: <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY>\nAn error occurred while processing your request.<p>\nReference&#32;&#35;102&#46;ef3b2f17&#46;1790204412&#46;8596d11\n<P>https&#58;&#47;&#47;errors&#46;edges"
+        "forecast": {
+          "raw_forecast_f": 68,
+          "corrected_f": 69,
+          "period_name": "This Afternoon",
+          "period_start": "2026-09-24T14:00:00-04:00"
+        },
+        "markets_scanned": 12,
+        "error": null
       },
       {
         "city": "Chicago",
-        "forecast": null,
-        "markets_scanned": 0,
-        "error": "https://api.weather.gov/gridpoints/LOT/73,76/forecast 503: <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY>\nAn error occurred while processing your request.<p>\nReference&#32;&#35;102&#46;ef3b2f17&#46;1790204413&#46;8596d4c\n<P>https&#58;&#47;&#47;errors&#46;edges"
+        "forecast": {
+          "raw_forecast_f": 66,
+          "corrected_f": 66.5,
+          "period_name": "This Afternoon",
+          "period_start": "2026-09-24T13:00:00-05:00"
+        },
+        "markets_scanned": 12,
+        "error": null
       },
       {
         "city": "Miami",
-        "forecast": null,
-        "markets_scanned": 0,
-        "error": "https://api.weather.gov/gridpoints/MFL/109,50/forecast 503: <HTML><HEAD><TITLE>Error</TITLE></HEAD><BODY>\nAn error occurred while processing your request.<p>\nReference&#32;&#35;102&#46;ef3b2f17&#46;1790204413&#46;8596d5d\n<P>https&#58;&#47;&#47;errors&#46;edges"
+        "forecast": {
+          "raw_forecast_f": 88,
+          "corrected_f": 91,
+          "period_name": "This Afternoon",
+          "period_start": "2026-09-24T14:00:00-04:00"
+        },
+        "markets_scanned": 12,
+        "error": null
       },
       {
         "city": "Austin",
@@ -154,7 +169,7 @@
           "raw_forecast_f": 99,
           "corrected_f": 100.5,
           "period_name": "This Afternoon",
-          "period_start": "2026-09-23T17:00:00-05:00"
+          "period_start": "2026-09-24T12:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -163,15 +178,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7706.03,
-        "vix": 15.18,
+        "spot": 7702.84,
+        "vix": 15.96,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 30470.293,
-        "vix": 20.76,
+        "spot": 30423.275,
+        "vix": 21.43,
         "markets_scanned": 0,
         "error": null
       }
