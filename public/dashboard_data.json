@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T18:20:10.906Z",
+  "generated_at": "2026-09-24T23:15:41.314Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -105,7 +105,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-09-24T18:20:10.906Z",
+    "timestamp": "2026-09-24T23:15:41.314Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 1175,
+  "elapsed_ms": 848,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 68,
-          "corrected_f": 69,
-          "period_name": "This Afternoon",
-          "period_start": "2026-09-24T14:00:00-04:00"
+          "raw_forecast_f": 69,
+          "corrected_f": 70,
+          "period_name": "Friday",
+          "period_start": "2026-09-25T06:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 66,
-          "corrected_f": 66.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-09-24T13:00:00-05:00"
+          "raw_forecast_f": 64,
+          "corrected_f": 64.5,
+          "period_name": "Friday",
+          "period_start": "2026-09-25T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 88,
           "corrected_f": 91,
-          "period_name": "This Afternoon",
-          "period_start": "2026-09-24T14:00:00-04:00"
+          "period_name": "Friday",
+          "period_start": "2026-09-25T06:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -169,7 +169,7 @@
           "raw_forecast_f": 99,
           "corrected_f": 100.5,
           "period_name": "This Afternoon",
-          "period_start": "2026-09-24T12:00:00-05:00"
+          "period_start": "2026-09-24T17:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,15 +178,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7702.84,
-        "vix": 15.96,
+        "spot": 7704.13,
+        "vix": 15.67,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 30423.275,
-        "vix": 21.43,
+        "spot": 30478.855,
+        "vix": 21.24,
         "markets_scanned": 0,
         "error": null
       }
