@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T23:54:17.610Z",
+  "generated_at": "2026-10-07T19:48:48.990Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -66,8 +66,8 @@
       "contracts": 11,
       "price_cents": 44,
       "cost_dollars": 4.84,
-      "current_price_cents": 52,
-      "unrealized_pnl": 0.8800000000000008,
+      "current_price_cents": 43,
+      "unrealized_pnl": -0.10999999999999943,
       "realized_pnl": 0
     },
     {
@@ -99,13 +99,13 @@
       "contracts": 20,
       "price_cents": 24,
       "cost_dollars": 4.72,
-      "current_price_cents": 5,
-      "unrealized_pnl": -3.719999999999999,
+      "current_price_cents": 6,
+      "unrealized_pnl": -3.5199999999999987,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-10-06T23:54:17.610Z",
+    "timestamp": "2026-10-07T19:48:48.990Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,7 +127,7 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 387,
+  "elapsed_ms": 566,
   "diagnostics": {
     "weather": [
       {
@@ -135,8 +135,8 @@
         "forecast": {
           "raw_forecast_f": 68,
           "corrected_f": 69,
-          "period_name": "Wednesday",
-          "period_start": "2026-10-07T06:00:00-04:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-10-07T14:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 76,
-          "corrected_f": 76.5,
-          "period_name": "Wednesday",
-          "period_start": "2026-10-07T06:00:00-05:00"
+          "raw_forecast_f": 77,
+          "corrected_f": 77.5,
+          "period_name": "This Afternoon",
+          "period_start": "2026-10-07T14:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 89,
           "corrected_f": 92,
-          "period_name": "Wednesday",
-          "period_start": "2026-10-07T06:00:00-04:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-10-07T15:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 89,
-          "corrected_f": 90.5,
-          "period_name": "Wednesday",
-          "period_start": "2026-10-07T06:00:00-05:00"
+          "raw_forecast_f": 90,
+          "corrected_f": 91.5,
+          "period_name": "This Afternoon",
+          "period_start": "2026-10-07T14:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,15 +178,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7818.93,
-        "vix": 15.01,
+        "spot": 7795.84,
+        "vix": 15.07,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 31224.686,
-        "vix": 21.15,
+        "spot": 31128.885,
+        "vix": 21.24,
         "markets_scanned": 0,
         "error": null
       }
