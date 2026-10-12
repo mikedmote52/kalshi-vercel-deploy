@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T18:42:35.606Z",
+  "generated_at": "2026-10-12T22:00:42.464Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -22,8 +22,8 @@
       "contracts": 14,
       "price_cents": 34,
       "cost_dollars": 4.76,
-      "current_price_cents": 30,
-      "unrealized_pnl": -0.5599999999999996,
+      "current_price_cents": 31,
+      "unrealized_pnl": -0.41999999999999993,
       "realized_pnl": 0
     },
     {
@@ -33,8 +33,8 @@
       "contracts": 11,
       "price_cents": 47,
       "cost_dollars": 5.17,
-      "current_price_cents": 71,
-      "unrealized_pnl": 2.6399999999999997,
+      "current_price_cents": 69,
+      "unrealized_pnl": 2.42,
       "realized_pnl": 0
     },
     {
@@ -55,8 +55,8 @@
       "contracts": 22,
       "price_cents": 64,
       "cost_dollars": 14.18,
-      "current_price_cents": 63,
-      "unrealized_pnl": -0.3200000000000003,
+      "current_price_cents": 66,
+      "unrealized_pnl": 0.3399999999999981,
       "realized_pnl": 0
     },
     {
@@ -66,8 +66,8 @@
       "contracts": 11,
       "price_cents": 44,
       "cost_dollars": 4.84,
-      "current_price_cents": 50,
-      "unrealized_pnl": 0.6600000000000001,
+      "current_price_cents": 49,
+      "unrealized_pnl": 0.5499999999999998,
       "realized_pnl": 0
     },
     {
@@ -77,8 +77,8 @@
       "contracts": 55,
       "price_cents": 10,
       "cost_dollars": 5.5,
-      "current_price_cents": 8,
-      "unrealized_pnl": -1.0999999999999996,
+      "current_price_cents": 9,
+      "unrealized_pnl": -0.5499999999999998,
       "realized_pnl": 0
     },
     {
@@ -105,9 +105,9 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-10-11T18:42:35.606Z",
-    "markets_pulled": 48,
-    "markets_analyzed": 48,
+    "timestamp": "2026-10-12T22:00:42.464Z",
+    "markets_pulled": 36,
+    "markets_analyzed": 36,
     "opportunities_found": 0,
     "trades_placed": 0
   },
@@ -127,38 +127,33 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 778,
+  "elapsed_ms": 940,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 65,
-          "corrected_f": 66,
-          "period_name": "Today",
-          "period_start": "2026-10-11T11:00:00-04:00"
+          "raw_forecast_f": 72,
+          "corrected_f": 73,
+          "period_name": "Tuesday",
+          "period_start": "2026-10-13T06:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
       },
       {
         "city": "Chicago",
-        "forecast": {
-          "raw_forecast_f": 74,
-          "corrected_f": 74.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-10-11T13:00:00-05:00"
-        },
-        "markets_scanned": 12,
-        "error": null
+        "forecast": null,
+        "markets_scanned": 0,
+        "error": "https://api.weather.gov/gridpoints/LOT/73,76/forecast 500: <!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"robots\" content=\"noindex,nofollow,noarchive\" />\n    <title>An Error Occurred: Internal Server Error</title>\n    <li"
       },
       {
         "city": "Miami",
         "forecast": {
-          "raw_forecast_f": 90,
-          "corrected_f": 93,
-          "period_name": "This Afternoon",
-          "period_start": "2026-10-11T13:00:00-04:00"
+          "raw_forecast_f": 88,
+          "corrected_f": 91,
+          "period_name": "Tuesday",
+          "period_start": "2026-10-13T06:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -168,8 +163,8 @@
         "forecast": {
           "raw_forecast_f": 93,
           "corrected_f": 94.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-10-11T13:00:00-05:00"
+          "period_name": "Columbus Day",
+          "period_start": "2026-10-12T17:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,14 +173,14 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7811.54,
-        "vix": 14.84,
+        "spot": 7807.24,
+        "vix": 15.21,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 30883.148,
+        "spot": 30664.697,
         "vix": 20.55,
         "markets_scanned": 0,
         "error": null
@@ -195,7 +190,7 @@
       {
         "event": "CPI September 2026",
         "date": "2026-10-14",
-        "days_until": 2.78,
+        "days_until": 1.65,
         "markets_found": 44
       }
     ]
