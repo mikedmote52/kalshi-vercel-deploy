@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T22:00:42.464Z",
+  "generated_at": "2026-10-13T02:07:32.723Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -88,8 +88,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 62,
-      "unrealized_pnl": 0.6999999999999993,
+      "current_price_cents": 64,
+      "unrealized_pnl": 0.9800000000000004,
       "realized_pnl": 0
     },
     {
@@ -105,9 +105,9 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-10-12T22:00:42.464Z",
-    "markets_pulled": 36,
-    "markets_analyzed": 36,
+    "timestamp": "2026-10-13T02:07:32.723Z",
+    "markets_pulled": 48,
+    "markets_analyzed": 48,
     "opportunities_found": 0,
     "trades_placed": 0
   },
@@ -127,7 +127,7 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 940,
+  "elapsed_ms": 614,
   "diagnostics": {
     "weather": [
       {
@@ -143,9 +143,14 @@
       },
       {
         "city": "Chicago",
-        "forecast": null,
-        "markets_scanned": 0,
-        "error": "https://api.weather.gov/gridpoints/LOT/73,76/forecast 500: <!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"robots\" content=\"noindex,nofollow,noarchive\" />\n    <title>An Error Occurred: Internal Server Error</title>\n    <li"
+        "forecast": {
+          "raw_forecast_f": 80,
+          "corrected_f": 80.5,
+          "period_name": "Tuesday",
+          "period_start": "2026-10-13T06:00:00-05:00"
+        },
+        "markets_scanned": 12,
+        "error": null
       },
       {
         "city": "Miami",
@@ -161,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 93,
-          "corrected_f": 94.5,
-          "period_name": "Columbus Day",
-          "period_start": "2026-10-12T17:00:00-05:00"
+          "raw_forecast_f": 94,
+          "corrected_f": 95.5,
+          "period_name": "Tuesday",
+          "period_start": "2026-10-13T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -190,7 +195,7 @@
       {
         "event": "CPI September 2026",
         "date": "2026-10-14",
-        "days_until": 1.65,
+        "days_until": 1.47,
         "markets_found": 44
       }
     ]
