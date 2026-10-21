@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T18:29:44.191Z",
+  "generated_at": "2026-10-21T23:28:11.260Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -12,7 +12,7 @@
       "price_cents": 2,
       "cost_dollars": 0.5,
       "current_price_cents": 13,
-      "unrealized_pnl": 2.7,
+      "unrealized_pnl": 2.725,
       "realized_pnl": 0
     },
     {
@@ -33,8 +33,8 @@
       "contracts": 11,
       "price_cents": 47,
       "cost_dollars": 5.17,
-      "current_price_cents": 70,
-      "unrealized_pnl": 2.5299999999999994,
+      "current_price_cents": 71,
+      "unrealized_pnl": 2.6399999999999997,
       "realized_pnl": 0
     },
     {
@@ -55,8 +55,8 @@
       "contracts": 22,
       "price_cents": 64,
       "cost_dollars": 14.18,
-      "current_price_cents": 66,
-      "unrealized_pnl": 0.3399999999999981,
+      "current_price_cents": 72,
+      "unrealized_pnl": 1.6600000000000001,
       "realized_pnl": 0
     },
     {
@@ -88,8 +88,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 59,
-      "unrealized_pnl": 0.27999999999999936,
+      "current_price_cents": 61,
+      "unrealized_pnl": 0.5599999999999987,
       "realized_pnl": 0
     },
     {
@@ -99,13 +99,13 @@
       "contracts": 20,
       "price_cents": 24,
       "cost_dollars": 4.72,
-      "current_price_cents": 9,
-      "unrealized_pnl": -2.9200000000000004,
+      "current_price_cents": 7,
+      "unrealized_pnl": -3.3200000000000007,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-10-21T18:29:44.191Z",
+    "timestamp": "2026-10-21T23:28:11.260Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 726,
+  "elapsed_ms": 723,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 62,
-          "corrected_f": 63,
-          "period_name": "This Afternoon",
-          "period_start": "2026-10-21T13:00:00-04:00"
+          "raw_forecast_f": 66,
+          "corrected_f": 67,
+          "period_name": "Thursday",
+          "period_start": "2026-10-22T06:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 68,
-          "corrected_f": 68.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-10-21T13:00:00-05:00"
+          "raw_forecast_f": 67,
+          "corrected_f": 67.5,
+          "period_name": "Thursday",
+          "period_start": "2026-10-22T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -155,10 +155,10 @@
       {
         "city": "Miami",
         "forecast": {
-          "raw_forecast_f": 85,
-          "corrected_f": 88,
-          "period_name": "This Afternoon",
-          "period_start": "2026-10-21T14:00:00-04:00"
+          "raw_forecast_f": 83,
+          "corrected_f": 86,
+          "period_name": "Thursday",
+          "period_start": "2026-10-22T06:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 85,
-          "corrected_f": 86.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-10-21T13:00:00-05:00"
+          "raw_forecast_f": 87,
+          "corrected_f": 88.5,
+          "period_name": "Thursday",
+          "period_start": "2026-10-22T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,15 +178,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7768.66,
-        "vix": 16.6,
+        "spot": 7757.17,
+        "vix": 16.68,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 29892.793,
-        "vix": 24.41,
+        "spot": 29822.518,
+        "vix": 24.42,
         "markets_scanned": 0,
         "error": null
       }
