@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T18:25:15.583Z",
+  "generated_at": "2026-10-22T23:27:56.736Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -99,13 +99,13 @@
       "contracts": 20,
       "price_cents": 24,
       "cost_dollars": 4.72,
-      "current_price_cents": 6,
-      "unrealized_pnl": -3.5199999999999987,
+      "current_price_cents": 8,
+      "unrealized_pnl": -3.1200000000000006,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-10-22T18:25:15.583Z",
+    "timestamp": "2026-10-22T23:27:56.736Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 1115,
+  "elapsed_ms": 418,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 65,
-          "corrected_f": 66,
-          "period_name": "This Afternoon",
-          "period_start": "2026-10-22T12:00:00-04:00"
+          "raw_forecast_f": 60,
+          "corrected_f": 61,
+          "period_name": "Friday",
+          "period_start": "2026-10-23T06:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -146,8 +146,8 @@
         "forecast": {
           "raw_forecast_f": 69,
           "corrected_f": 69.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-10-22T13:00:00-05:00"
+          "period_name": "Friday",
+          "period_start": "2026-10-23T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 83,
           "corrected_f": 86,
-          "period_name": "This Afternoon",
-          "period_start": "2026-10-22T14:00:00-04:00"
+          "period_name": "Friday",
+          "period_start": "2026-10-23T06:00:00-04:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 87,
-          "corrected_f": 88.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-10-22T13:00:00-05:00"
+          "raw_forecast_f": 88,
+          "corrected_f": 89.5,
+          "period_name": "Friday",
+          "period_start": "2026-10-23T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,15 +178,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7658.23,
-        "vix": 19.48,
+        "spot": 7663.43,
+        "vix": 19.03,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 28993.6,
-        "vix": 29.18,
+        "spot": 28958.688,
+        "vix": 28.72,
         "markets_scanned": 0,
         "error": null
       }
