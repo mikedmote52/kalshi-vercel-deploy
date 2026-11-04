@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T00:42:24.071Z",
+  "generated_at": "2026-11-04T20:41:48.614Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -22,8 +22,8 @@
       "contracts": 14,
       "price_cents": 34,
       "cost_dollars": 4.76,
-      "current_price_cents": 36,
-      "unrealized_pnl": 0.28000000000000025,
+      "current_price_cents": 31,
+      "unrealized_pnl": -0.41999999999999993,
       "realized_pnl": 0
     },
     {
@@ -33,8 +33,8 @@
       "contracts": 11,
       "price_cents": 47,
       "cost_dollars": 5.17,
-      "current_price_cents": 64,
-      "unrealized_pnl": 1.87,
+      "current_price_cents": 66,
+      "unrealized_pnl": 2.089999999999999,
       "realized_pnl": 0
     },
     {
@@ -55,8 +55,8 @@
       "contracts": 22,
       "price_cents": 64,
       "cost_dollars": 14.18,
-      "current_price_cents": 74,
-      "unrealized_pnl": 2.1000000000000014,
+      "current_price_cents": 86,
+      "unrealized_pnl": 4.739999999999998,
       "realized_pnl": 0
     },
     {
@@ -66,8 +66,8 @@
       "contracts": 11,
       "price_cents": 44,
       "cost_dollars": 4.84,
-      "current_price_cents": 57,
-      "unrealized_pnl": 1.4300000000000006,
+      "current_price_cents": 52,
+      "unrealized_pnl": 0.8800000000000008,
       "realized_pnl": 0
     },
     {
@@ -88,8 +88,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 61,
-      "unrealized_pnl": 0.5599999999999987,
+      "current_price_cents": 60,
+      "unrealized_pnl": 0.41999999999999993,
       "realized_pnl": 0
     },
     {
@@ -99,13 +99,13 @@
       "contracts": 20,
       "price_cents": 24,
       "cost_dollars": 4.72,
-      "current_price_cents": 2,
-      "unrealized_pnl": -4.319999999999999,
+      "current_price_cents": 3,
+      "unrealized_pnl": -4.119999999999999,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-11-04T00:42:24.071Z",
+    "timestamp": "2026-11-04T20:41:48.614Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 457,
+  "elapsed_ms": 749,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 71,
-          "corrected_f": 72,
-          "period_name": "Wednesday",
-          "period_start": "2026-11-04T06:00:00-05:00"
+          "raw_forecast_f": 69,
+          "corrected_f": 70,
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-04T15:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -146,8 +146,8 @@
         "forecast": {
           "raw_forecast_f": 64,
           "corrected_f": 64.5,
-          "period_name": "Wednesday",
-          "period_start": "2026-11-04T06:00:00-06:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-04T14:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 84,
           "corrected_f": 87,
-          "period_name": "Wednesday",
-          "period_start": "2026-11-04T06:00:00-05:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-04T15:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 75,
-          "corrected_f": 76.5,
-          "period_name": "Wednesday",
-          "period_start": "2026-11-04T06:00:00-06:00"
+          "raw_forecast_f": 78,
+          "corrected_f": 79.5,
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-04T13:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,15 +178,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7568.92,
-        "vix": 20.83,
+        "spot": 7698.21,
+        "vix": 16.78,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 28180.264,
-        "vix": 30.53,
+        "spot": 28445.488,
+        "vix": 25.19,
         "markets_scanned": 0,
         "error": null
       }
@@ -195,13 +195,13 @@
       {
         "event": "FOMC",
         "date": "2026-11-04",
-        "days_until": 0.53,
+        "days_until": -0.3,
         "markets_found": 200
       },
       {
         "event": "NFP October 2026",
         "date": "2026-11-06",
-        "days_until": 2.53,
+        "days_until": 1.7,
         "markets_found": 0
       }
     ]
