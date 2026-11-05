@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T20:41:48.614Z",
+  "generated_at": "2026-11-05T00:56:35.973Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -11,8 +11,8 @@
       "contracts": 25,
       "price_cents": 2,
       "cost_dollars": 0.5,
-      "current_price_cents": 8,
-      "unrealized_pnl": 1.5,
+      "current_price_cents": 6,
+      "unrealized_pnl": 1.025,
       "realized_pnl": 0
     },
     {
@@ -33,8 +33,8 @@
       "contracts": 11,
       "price_cents": 47,
       "cost_dollars": 5.17,
-      "current_price_cents": 66,
-      "unrealized_pnl": 2.089999999999999,
+      "current_price_cents": 68,
+      "unrealized_pnl": 2.3099999999999996,
       "realized_pnl": 0
     },
     {
@@ -105,7 +105,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-11-04T20:41:48.614Z",
+    "timestamp": "2026-11-05T00:56:35.973Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 749,
+  "elapsed_ms": 429,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 69,
-          "corrected_f": 70,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-04T15:00:00-05:00"
+          "raw_forecast_f": 70,
+          "corrected_f": 71,
+          "period_name": "Thursday",
+          "period_start": "2026-11-05T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 64,
-          "corrected_f": 64.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-04T14:00:00-06:00"
+          "raw_forecast_f": 52,
+          "corrected_f": 52.5,
+          "period_name": "Thursday",
+          "period_start": "2026-11-05T06:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 84,
           "corrected_f": 87,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-04T15:00:00-05:00"
+          "period_name": "Thursday",
+          "period_start": "2026-11-05T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 78,
-          "corrected_f": 79.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-04T13:00:00-06:00"
+          "raw_forecast_f": 81,
+          "corrected_f": 82.5,
+          "period_name": "Thursday",
+          "period_start": "2026-11-05T06:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,15 +178,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7698.21,
-        "vix": 16.78,
+        "spot": 7688.62,
+        "vix": 16.61,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 28445.488,
-        "vix": 25.19,
+        "spot": 28437.166,
+        "vix": 25.08,
         "markets_scanned": 0,
         "error": null
       }
@@ -195,13 +195,13 @@
       {
         "event": "FOMC",
         "date": "2026-11-04",
-        "days_until": -0.3,
+        "days_until": -0.48,
         "markets_found": 200
       },
       {
         "event": "NFP October 2026",
         "date": "2026-11-06",
-        "days_until": 1.7,
+        "days_until": 1.52,
         "markets_found": 0
       }
     ]
