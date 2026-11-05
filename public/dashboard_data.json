@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T00:56:35.973Z",
+  "generated_at": "2026-11-05T20:57:33.672Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -22,8 +22,8 @@
       "contracts": 14,
       "price_cents": 34,
       "cost_dollars": 4.76,
-      "current_price_cents": 31,
-      "unrealized_pnl": -0.41999999999999993,
+      "current_price_cents": 35,
+      "unrealized_pnl": 0.13999999999999968,
       "realized_pnl": 0
     },
     {
@@ -55,8 +55,8 @@
       "contracts": 22,
       "price_cents": 64,
       "cost_dollars": 14.18,
-      "current_price_cents": 86,
-      "unrealized_pnl": 4.739999999999998,
+      "current_price_cents": 78,
+      "unrealized_pnl": 2.9800000000000004,
       "realized_pnl": 0
     },
     {
@@ -88,8 +88,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 60,
-      "unrealized_pnl": 0.41999999999999993,
+      "current_price_cents": 63,
+      "unrealized_pnl": 0.8399999999999999,
       "realized_pnl": 0
     },
     {
@@ -99,13 +99,13 @@
       "contracts": 20,
       "price_cents": 24,
       "cost_dollars": 4.72,
-      "current_price_cents": 3,
-      "unrealized_pnl": -4.119999999999999,
+      "current_price_cents": 8,
+      "unrealized_pnl": -3.1200000000000006,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-11-05T00:56:35.973Z",
+    "timestamp": "2026-11-05T20:57:33.672Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,7 +127,7 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 429,
+  "elapsed_ms": 790,
   "diagnostics": {
     "weather": [
       {
@@ -135,8 +135,8 @@
         "forecast": {
           "raw_forecast_f": 70,
           "corrected_f": 71,
-          "period_name": "Thursday",
-          "period_start": "2026-11-05T06:00:00-05:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-05T15:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -146,8 +146,8 @@
         "forecast": {
           "raw_forecast_f": 52,
           "corrected_f": 52.5,
-          "period_name": "Thursday",
-          "period_start": "2026-11-05T06:00:00-06:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-05T14:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -155,10 +155,10 @@
       {
         "city": "Miami",
         "forecast": {
-          "raw_forecast_f": 84,
-          "corrected_f": 87,
-          "period_name": "Thursday",
-          "period_start": "2026-11-05T06:00:00-05:00"
+          "raw_forecast_f": 85,
+          "corrected_f": 88,
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-05T15:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 81,
-          "corrected_f": 82.5,
-          "period_name": "Thursday",
-          "period_start": "2026-11-05T06:00:00-06:00"
+          "raw_forecast_f": 83,
+          "corrected_f": 84.5,
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-05T14:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,30 +178,24 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7688.62,
-        "vix": 16.61,
+        "spot": 7362.15,
+        "vix": 26.85,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 28437.166,
-        "vix": 25.08,
+        "spot": 26646.98,
+        "vix": 36.91,
         "markets_scanned": 0,
         "error": null
       }
     ],
     "econ_calendar": [
       {
-        "event": "FOMC",
-        "date": "2026-11-04",
-        "days_until": -0.48,
-        "markets_found": 200
-      },
-      {
         "event": "NFP October 2026",
         "date": "2026-11-06",
-        "days_until": 1.52,
+        "days_until": 0.69,
         "markets_found": 0
       }
     ]
