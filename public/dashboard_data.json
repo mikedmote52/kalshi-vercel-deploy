@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T23:18:57.876Z",
+  "generated_at": "2026-11-10T02:48:25.099Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -105,7 +105,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-11-09T23:18:57.876Z",
+    "timestamp": "2026-11-10T02:48:25.099Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,7 +127,7 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 600,
+  "elapsed_ms": 718,
   "diagnostics": {
     "weather": [
       {
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 60,
-          "corrected_f": 60.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-09T17:00:00-06:00"
+          "raw_forecast_f": 61,
+          "corrected_f": 61.5,
+          "period_name": "Tuesday",
+          "period_start": "2026-11-10T06:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 84,
           "corrected_f": 87,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-09T16:00:00-05:00"
+          "period_name": "Tuesday",
+          "period_start": "2026-11-10T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 69,
-          "corrected_f": 70.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-09T16:00:00-06:00"
+          "raw_forecast_f": 71,
+          "corrected_f": 72.5,
+          "period_name": "Tuesday",
+          "period_start": "2026-11-10T06:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -195,7 +195,7 @@
       {
         "event": "CPI October 2026",
         "date": "2026-11-12",
-        "days_until": 2.59,
+        "days_until": 2.45,
         "markets_found": 32
       }
     ]
