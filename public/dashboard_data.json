@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T02:48:25.099Z",
+  "generated_at": "2026-11-10T20:44:00.740Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -11,8 +11,8 @@
       "contracts": 25,
       "price_cents": 2,
       "cost_dollars": 0.5,
-      "current_price_cents": 7,
-      "unrealized_pnl": 1.175,
+      "current_price_cents": 6,
+      "unrealized_pnl": 1,
       "realized_pnl": 0
     },
     {
@@ -22,8 +22,8 @@
       "contracts": 14,
       "price_cents": 34,
       "cost_dollars": 4.76,
-      "current_price_cents": 32,
-      "unrealized_pnl": -0.27999999999999936,
+      "current_price_cents": 34,
+      "unrealized_pnl": 8.881784197001252e-16,
       "realized_pnl": 0
     },
     {
@@ -66,8 +66,8 @@
       "contracts": 11,
       "price_cents": 44,
       "cost_dollars": 4.84,
-      "current_price_cents": 59,
-      "unrealized_pnl": 1.6500000000000012,
+      "current_price_cents": 60,
+      "unrealized_pnl": 1.7599999999999998,
       "realized_pnl": 0
     },
     {
@@ -77,8 +77,8 @@
       "contracts": 55,
       "price_cents": 10,
       "cost_dollars": 5.5,
-      "current_price_cents": 11,
-      "unrealized_pnl": 0.5499999999999998,
+      "current_price_cents": 10,
+      "unrealized_pnl": 0,
       "realized_pnl": 0
     },
     {
@@ -88,8 +88,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 61,
-      "unrealized_pnl": 0.5599999999999987,
+      "current_price_cents": 60,
+      "unrealized_pnl": 0.41999999999999993,
       "realized_pnl": 0
     },
     {
@@ -105,7 +105,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-11-10T02:48:25.099Z",
+    "timestamp": "2026-11-10T20:44:00.740Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,7 +127,7 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 718,
+  "elapsed_ms": 580,
   "diagnostics": {
     "weather": [
       {
@@ -135,8 +135,8 @@
         "forecast": {
           "raw_forecast_f": 62,
           "corrected_f": 63,
-          "period_name": "Tuesday",
-          "period_start": "2026-11-10T06:00:00-05:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-10T15:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 61,
-          "corrected_f": 61.5,
-          "period_name": "Tuesday",
-          "period_start": "2026-11-10T06:00:00-06:00"
+          "raw_forecast_f": 63,
+          "corrected_f": 63.5,
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-10T14:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 84,
           "corrected_f": 87,
-          "period_name": "Tuesday",
-          "period_start": "2026-11-10T06:00:00-05:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-10T15:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -168,8 +168,8 @@
         "forecast": {
           "raw_forecast_f": 71,
           "corrected_f": 72.5,
-          "period_name": "Tuesday",
-          "period_start": "2026-11-10T06:00:00-06:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-10T13:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,15 +178,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7549.94,
-        "vix": 19.92,
+        "spot": 7516.05,
+        "vix": 19.76,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 27907.625,
-        "vix": 29.11,
+        "spot": 27691.406,
+        "vix": 28.97,
         "markets_scanned": 0,
         "error": null
       }
@@ -195,8 +195,8 @@
       {
         "event": "CPI October 2026",
         "date": "2026-11-12",
-        "days_until": 2.45,
-        "markets_found": 32
+        "days_until": 1.7,
+        "markets_found": 20
       }
     ]
   }
