@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T21:08:53.923Z",
+  "generated_at": "2026-11-12T01:56:26.461Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -55,8 +55,8 @@
       "contracts": 22,
       "price_cents": 64,
       "cost_dollars": 14.18,
-      "current_price_cents": 78,
-      "unrealized_pnl": 2.9800000000000004,
+      "current_price_cents": 84,
+      "unrealized_pnl": 4.300000000000001,
       "realized_pnl": 0
     },
     {
@@ -88,8 +88,8 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 64,
-      "unrealized_pnl": 0.9800000000000004,
+      "current_price_cents": 67,
+      "unrealized_pnl": 1.4000000000000004,
       "realized_pnl": 0
     },
     {
@@ -105,7 +105,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-11-11T21:08:53.923Z",
+    "timestamp": "2026-11-12T01:56:26.461Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 364,
+  "elapsed_ms": 647,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 63,
-          "corrected_f": 64,
-          "period_name": "Veterans Day",
-          "period_start": "2026-11-11T15:00:00-05:00"
+          "raw_forecast_f": 61,
+          "corrected_f": 62,
+          "period_name": "Thursday",
+          "period_start": "2026-11-12T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 56,
-          "corrected_f": 56.5,
-          "period_name": "Veterans Day",
-          "period_start": "2026-11-11T15:00:00-06:00"
+          "raw_forecast_f": 43,
+          "corrected_f": 43.5,
+          "period_name": "Thursday",
+          "period_start": "2026-11-12T06:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 84,
           "corrected_f": 87,
-          "period_name": "Veterans Day",
-          "period_start": "2026-11-11T16:00:00-05:00"
+          "period_name": "Thursday",
+          "period_start": "2026-11-12T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 77,
-          "corrected_f": 78.5,
-          "period_name": "Veterans Day",
-          "period_start": "2026-11-11T13:00:00-06:00"
+          "raw_forecast_f": 76,
+          "corrected_f": 77.5,
+          "period_name": "Thursday",
+          "period_start": "2026-11-12T06:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -179,14 +179,14 @@
       {
         "index": "S&P 500",
         "spot": 7619.38,
-        "vix": 17.58,
+        "vix": 17.49,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
         "spot": 28374.252,
-        "vix": 28.57,
+        "vix": 26.74,
         "markets_scanned": 0,
         "error": null
       }
@@ -195,7 +195,7 @@
       {
         "event": "CPI October 2026",
         "date": "2026-11-12",
-        "days_until": 0.68,
+        "days_until": 0.48,
         "markets_found": 20
       }
     ]
