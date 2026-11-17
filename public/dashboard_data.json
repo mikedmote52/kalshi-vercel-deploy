@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T23:15:28.675Z",
+  "generated_at": "2026-11-17T02:59:34.100Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -105,7 +105,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-11-16T23:15:28.675Z",
+    "timestamp": "2026-11-17T02:59:34.100Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,7 +127,7 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 497,
+  "elapsed_ms": 682,
   "diagnostics": {
     "weather": [
       {
@@ -135,8 +135,8 @@
         "forecast": {
           "raw_forecast_f": 56,
           "corrected_f": 57,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-16T13:00:00-05:00"
+          "period_name": "Tuesday",
+          "period_start": "2026-11-17T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 53,
-          "corrected_f": 53.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-16T17:00:00-06:00"
+          "raw_forecast_f": 56,
+          "corrected_f": 56.5,
+          "period_name": "Tuesday",
+          "period_start": "2026-11-17T06:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 81,
           "corrected_f": 84,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-16T16:00:00-05:00"
+          "period_name": "Tuesday",
+          "period_start": "2026-11-17T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 59,
-          "corrected_f": 60.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-16T16:00:00-06:00"
+          "raw_forecast_f": 65,
+          "corrected_f": 66.5,
+          "period_name": "Tuesday",
+          "period_start": "2026-11-17T06:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
