@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T22:06:07.774Z",
+  "generated_at": "2026-11-18T02:28:52.518Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 9,
@@ -105,7 +105,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-11-17T22:06:07.774Z",
+    "timestamp": "2026-11-18T02:28:52.518Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +127,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 578,
+  "elapsed_ms": 595,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 57,
-          "corrected_f": 58,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-17T15:00:00-05:00"
+          "raw_forecast_f": 59,
+          "corrected_f": 60,
+          "period_name": "Wednesday",
+          "period_start": "2026-11-18T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +144,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 58,
-          "corrected_f": 58.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-17T15:00:00-06:00"
+          "raw_forecast_f": 60,
+          "corrected_f": 60.5,
+          "period_name": "Wednesday",
+          "period_start": "2026-11-18T06:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -155,10 +155,10 @@
       {
         "city": "Miami",
         "forecast": {
-          "raw_forecast_f": 82,
-          "corrected_f": 85,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-17T17:00:00-05:00"
+          "raw_forecast_f": 79,
+          "corrected_f": 82,
+          "period_name": "Wednesday",
+          "period_start": "2026-11-18T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +166,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 66,
-          "corrected_f": 67.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-17T14:00:00-06:00"
+          "raw_forecast_f": 68,
+          "corrected_f": 69.5,
+          "period_name": "Wednesday",
+          "period_start": "2026-11-18T06:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
