@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-19T01:55:15.526Z",
+  "generated_at": "2026-11-19T22:01:02.529Z",
   "balance": 0.83,
   "total_pnl": 156.24,
-  "positions": 9,
+  "positions": 8,
   "position_details": [
     {
       "ticker": "USCLIMATE-2025",
@@ -33,8 +33,8 @@
       "contracts": 11,
       "price_cents": 47,
       "cost_dollars": 5.17,
-      "current_price_cents": 70,
-      "unrealized_pnl": 2.5299999999999994,
+      "current_price_cents": 67,
+      "unrealized_pnl": 2.1999999999999993,
       "realized_pnl": 0
     },
     {
@@ -77,8 +77,8 @@
       "contracts": 55,
       "price_cents": 10,
       "cost_dollars": 5.5,
-      "current_price_cents": 10,
-      "unrealized_pnl": 0,
+      "current_price_cents": 12,
+      "unrealized_pnl": 1.0999999999999996,
       "realized_pnl": 0
     },
     {
@@ -88,24 +88,13 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 65,
-      "unrealized_pnl": 1.1199999999999992,
-      "realized_pnl": 0
-    },
-    {
-      "ticker": "KXOAIANTH-40-ANTH",
-      "title": "Will Open AI or Anthropic IPO first?",
-      "side": "no",
-      "contracts": 20,
-      "price_cents": 24,
-      "cost_dollars": 4.72,
-      "current_price_cents": 1,
-      "unrealized_pnl": -4.52,
+      "current_price_cents": 66,
+      "unrealized_pnl": 1.2599999999999998,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-11-19T01:55:15.526Z",
+    "timestamp": "2026-11-19T22:01:02.529Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -127,16 +116,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 657,
+  "elapsed_ms": 1579,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 59,
-          "corrected_f": 60,
-          "period_name": "Thursday",
-          "period_start": "2026-11-19T06:00:00-05:00"
+          "raw_forecast_f": 61,
+          "corrected_f": 62,
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-19T17:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -144,10 +133,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 64,
-          "corrected_f": 64.5,
-          "period_name": "Thursday",
-          "period_start": "2026-11-19T06:00:00-06:00"
+          "raw_forecast_f": 65,
+          "corrected_f": 65.5,
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-19T16:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +146,8 @@
         "forecast": {
           "raw_forecast_f": 80,
           "corrected_f": 83,
-          "period_name": "Thursday",
-          "period_start": "2026-11-19T06:00:00-05:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-19T17:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -166,10 +155,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 72,
-          "corrected_f": 73.5,
-          "period_name": "Thursday",
-          "period_start": "2026-11-19T06:00:00-06:00"
+          "raw_forecast_f": 74,
+          "corrected_f": 75.5,
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-19T15:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -178,15 +167,15 @@
     "zero_dte": [
       {
         "index": "S&P 500",
-        "spot": 7323.63,
-        "vix": 24.56,
+        "spot": 7175.83,
+        "vix": 28.44,
         "markets_scanned": 0,
         "error": null
       },
       {
         "index": "Nasdaq 100",
-        "spot": 27116.258,
-        "vix": 33.12,
+        "spot": 26517.05,
+        "vix": 36.48,
         "markets_scanned": 0,
         "error": null
       }
