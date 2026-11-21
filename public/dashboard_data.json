@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T01:36:30.991Z",
+  "generated_at": "2026-11-21T20:24:33.940Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 8,
@@ -66,8 +66,8 @@
       "contracts": 11,
       "price_cents": 44,
       "cost_dollars": 4.84,
-      "current_price_cents": 60,
-      "unrealized_pnl": 1.7599999999999998,
+      "current_price_cents": 61,
+      "unrealized_pnl": 1.87,
       "realized_pnl": 0
     },
     {
@@ -94,7 +94,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-11-21T01:36:30.991Z",
+    "timestamp": "2026-11-21T20:24:33.940Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -116,7 +116,7 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 688,
+  "elapsed_ms": 721,
   "diagnostics": {
     "weather": [
       {
@@ -124,8 +124,8 @@
         "forecast": {
           "raw_forecast_f": 61,
           "corrected_f": 62,
-          "period_name": "Saturday",
-          "period_start": "2026-11-21T06:00:00-05:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-21T14:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -133,10 +133,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 68,
-          "corrected_f": 68.5,
-          "period_name": "Saturday",
-          "period_start": "2026-11-21T06:00:00-06:00"
+          "raw_forecast_f": 69,
+          "corrected_f": 69.5,
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-21T14:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -146,8 +146,8 @@
         "forecast": {
           "raw_forecast_f": 83,
           "corrected_f": 86,
-          "period_name": "Saturday",
-          "period_start": "2026-11-21T06:00:00-05:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-21T15:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 76,
           "corrected_f": 77.5,
-          "period_name": "Saturday",
-          "period_start": "2026-11-21T06:00:00-06:00"
+          "period_name": "This Afternoon",
+          "period_start": "2026-11-21T14:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
