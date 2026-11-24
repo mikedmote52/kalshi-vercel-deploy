@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T01:31:37.113Z",
+  "generated_at": "2026-11-24T04:52:04.574Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 8,
@@ -88,13 +88,13 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 63,
-      "unrealized_pnl": 0.8399999999999999,
+      "current_price_cents": 64,
+      "unrealized_pnl": 0.9800000000000004,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-11-24T01:31:37.113Z",
+    "timestamp": "2026-11-24T04:52:04.574Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -116,7 +116,7 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 621,
+  "elapsed_ms": 542,
   "diagnostics": {
     "weather": [
       {
@@ -133,8 +133,8 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 42,
-          "corrected_f": 42.5,
+          "raw_forecast_f": 41,
+          "corrected_f": 41.5,
           "period_name": "Tuesday",
           "period_start": "2026-11-24T06:00:00-06:00"
         },
