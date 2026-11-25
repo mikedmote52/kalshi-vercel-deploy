@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T23:25:17.145Z",
+  "generated_at": "2026-11-25T03:35:55.987Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 8,
@@ -22,8 +22,8 @@
       "contracts": 14,
       "price_cents": 34,
       "cost_dollars": 4.76,
-      "current_price_cents": 34,
-      "unrealized_pnl": 8.881784197001252e-16,
+      "current_price_cents": 37,
+      "unrealized_pnl": 0.41999999999999993,
       "realized_pnl": 0
     },
     {
@@ -88,13 +88,13 @@
       "contracts": 14,
       "price_cents": 57,
       "cost_dollars": 7.98,
-      "current_price_cents": 64,
-      "unrealized_pnl": 0.9800000000000004,
+      "current_price_cents": 66,
+      "unrealized_pnl": 1.2599999999999998,
       "realized_pnl": 0
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-11-24T23:25:17.145Z",
+    "timestamp": "2026-11-25T03:35:55.987Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -116,7 +116,7 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 781,
+  "elapsed_ms": 1213,
   "diagnostics": {
     "weather": [
       {
@@ -133,10 +133,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 42,
-          "corrected_f": 42.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-24T17:00:00-06:00"
+          "raw_forecast_f": 46,
+          "corrected_f": 46.5,
+          "period_name": "Wednesday",
+          "period_start": "2026-11-25T06:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -155,10 +155,10 @@
       {
         "city": "Austin",
         "forecast": {
-          "raw_forecast_f": 54,
-          "corrected_f": 55.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-24T17:00:00-06:00"
+          "raw_forecast_f": 58,
+          "corrected_f": 59.5,
+          "period_name": "Wednesday",
+          "period_start": "2026-11-25T06:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
