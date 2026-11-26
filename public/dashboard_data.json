@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T22:59:17.621Z",
+  "generated_at": "2026-11-26T02:56:01.396Z",
   "balance": 0.83,
   "total_pnl": 156.24,
   "positions": 8,
@@ -94,7 +94,7 @@
     }
   ],
   "latest_scan": {
-    "timestamp": "2026-11-25T22:59:17.621Z",
+    "timestamp": "2026-11-26T02:56:01.396Z",
     "markets_pulled": 48,
     "markets_analyzed": 48,
     "opportunities_found": 0,
@@ -116,16 +116,16 @@
     }
   ],
   "performance": null,
-  "elapsed_ms": 642,
+  "elapsed_ms": 561,
   "diagnostics": {
     "weather": [
       {
         "city": "NYC",
         "forecast": {
-          "raw_forecast_f": 48,
-          "corrected_f": 49,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-25T17:00:00-05:00"
+          "raw_forecast_f": 59,
+          "corrected_f": 60,
+          "period_name": "Thanksgiving Day",
+          "period_start": "2026-11-26T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -133,10 +133,10 @@
       {
         "city": "Chicago",
         "forecast": {
-          "raw_forecast_f": 41,
-          "corrected_f": 41.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-25T16:00:00-06:00"
+          "raw_forecast_f": 45,
+          "corrected_f": 45.5,
+          "period_name": "Thanksgiving Day",
+          "period_start": "2026-11-26T06:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -146,8 +146,8 @@
         "forecast": {
           "raw_forecast_f": 78,
           "corrected_f": 81,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-25T17:00:00-05:00"
+          "period_name": "Thanksgiving Day",
+          "period_start": "2026-11-26T06:00:00-05:00"
         },
         "markets_scanned": 12,
         "error": null
@@ -157,8 +157,8 @@
         "forecast": {
           "raw_forecast_f": 59,
           "corrected_f": 60.5,
-          "period_name": "This Afternoon",
-          "period_start": "2026-11-25T16:00:00-06:00"
+          "period_name": "Thanksgiving Day",
+          "period_start": "2026-11-26T06:00:00-06:00"
         },
         "markets_scanned": 12,
         "error": null
